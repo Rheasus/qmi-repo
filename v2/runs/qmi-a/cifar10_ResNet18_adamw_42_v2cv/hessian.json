@@ -1,0 +1,20 @@
+{
+  "top_eigenvalues": [
+    7.488980293273926,
+    6.356466293334961,
+    5.470014572143555,
+    4.747450828552246,
+    3.5942771434783936
+  ],
+  "lambda_max": 7.488980293273926,
+  "spectral_ratio_1_to_k": 2.083584541292884,
+  "trace": 65.6750919342041,
+  "trace_per_param": 5.873474748539088e-06,
+  "n_params": 11181642,
+  "batch_size": 512,
+  "run_id": "cifar10_ResNet18_adamw_42_v2cv",
+  "arm": "adamw",
+  "dataset": "cifar10",
+  "model": "ResNet18",
+  "seed": 42
+}

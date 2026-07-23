@@ -1,0 +1,26 @@
+{
+  "run_id": "california_housing_MLP_qpso_1337_v2tab",
+  "domain": "tabular",
+  "tag": "v2tab",
+  "dataset": "california_housing",
+  "model": "MLP",
+  "task": "regression",
+  "optimizer": "qpso",
+  "seed": 1337,
+  "lr": 0.001,
+  "epochs_max": 50,
+  "completed_epochs": 6,
+  "batch_size": 32,
+  "opt_kwargs": {
+    "n_particles": 10
+  },
+  "final_train_loss": 40.48599595833669,
+  "best_val_loss": 4.256078924451556,
+  "training_time_seconds": 16.842262983322144,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121",
+  "test_loss": 4.274696486336844,
+  "test_rmse": 2.101621389389038,
+  "test_mae": 1.7598633766174316,
+  "test_r2": -2.5213364070480844
+}

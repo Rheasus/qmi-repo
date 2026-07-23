@@ -1,0 +1,20 @@
+{
+  "top_eigenvalues": [
+    275.8055725097656,
+    200.7638397216797,
+    100.50226593017578,
+    81.59121704101562,
+    76.243896484375
+  ],
+  "lambda_max": 275.8055725097656,
+  "spectral_ratio_1_to_k": 3.6174118221553337,
+  "trace": 1004.8188110351563,
+  "trace_per_param": 0.0008756850408074455,
+  "n_params": 1147466,
+  "batch_size": 512,
+  "run_id": "cifar10_SimpleCNN_ngd_2025_v2cv",
+  "arm": "ngd",
+  "dataset": "cifar10",
+  "model": "SimpleCNN",
+  "seed": 2025
+}

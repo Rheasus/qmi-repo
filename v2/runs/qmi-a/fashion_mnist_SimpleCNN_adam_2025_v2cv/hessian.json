@@ -1,0 +1,20 @@
+{
+  "top_eigenvalues": [
+    54.17502975463867,
+    33.86543273925781,
+    13.203429222106934,
+    11.233230590820312,
+    7.756160736083984
+  ],
+  "lambda_max": 54.17502975463867,
+  "spectral_ratio_1_to_k": 6.984773987805616,
+  "trace": 194.55617294311523,
+  "trace_per_param": 0.00028272842502974,
+  "n_params": 688138,
+  "batch_size": 512,
+  "run_id": "fashion_mnist_SimpleCNN_adam_2025_v2cv",
+  "arm": "adam",
+  "dataset": "fashion_mnist",
+  "model": "SimpleCNN",
+  "seed": 2025
+}

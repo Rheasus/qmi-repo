@@ -1,0 +1,20 @@
+{
+  "top_eigenvalues": [
+    32.905242919921875,
+    20.113563537597656,
+    17.111858367919922,
+    13.028367042541504,
+    12.023171424865723
+  ],
+  "lambda_max": 32.905242919921875,
+  "spectral_ratio_1_to_k": 2.736818910513818,
+  "trace": 227.95526402791342,
+  "trace_per_param": 0.0001986597110745882,
+  "n_params": 1147466,
+  "batch_size": 512,
+  "run_id": "cifar10_SimpleCNN_adamw_42_v2cv",
+  "arm": "adamw",
+  "dataset": "cifar10",
+  "model": "SimpleCNN",
+  "seed": 42
+}

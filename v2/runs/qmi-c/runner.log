@@ -1,0 +1,74 @@
+2026-07-08 18:09:24 queue=/home/azureuser/qmi-v2/queue/nlp_real_qi.jsonl items=36
+2026-07-08 18:09:24 [1/36] start sst2_roberta_ngd_42_v2qi
+2026-07-08 20:30:41 [1/36] done sst2_roberta_ngd_42_v2qi acc=0.9438073394495413 in 8478s
+2026-07-08 20:30:41 [2/36] start sst2_roberta_ngd_1337_v2qi
+2026-07-08 22:51:41 [2/36] done sst2_roberta_ngd_1337_v2qi acc=0.9472477064220184 in 8460s
+2026-07-08 22:51:41 [3/36] start sst2_roberta_ngd_2025_v2qi
+2026-07-09 01:13:11 [3/36] done sst2_roberta_ngd_2025_v2qi acc=0.9334862385321101 in 8490s
+2026-07-09 01:13:11 [4/36] start sst2_distilbert_ngd_42_v2qi
+2026-07-09 02:23:06 [4/36] done sst2_distilbert_ngd_42_v2qi acc=0.8967889908256881 in 4195s
+2026-07-09 02:23:06 [5/36] start sst2_distilbert_ngd_1337_v2qi
+2026-07-09 03:33:06 [5/36] done sst2_distilbert_ngd_1337_v2qi acc=0.9013761467889908 in 4200s
+2026-07-09 03:33:06 [6/36] start sst2_distilbert_ngd_2025_v2qi
+2026-07-09 04:43:22 [6/36] done sst2_distilbert_ngd_2025_v2qi acc=0.9002293577981652 in 4216s
+2026-07-09 04:43:22 [7/36] start imdb_roberta_ngd_42_v2qi
+2026-07-09 06:02:30 [7/36] done imdb_roberta_ngd_42_v2qi acc=0.9378 in 4748s
+2026-07-09 06:02:30 [8/36] start imdb_roberta_ngd_1337_v2qi
+2026-07-09 07:21:29 [8/36] done imdb_roberta_ngd_1337_v2qi acc=0.93732 in 4739s
+2026-07-09 07:21:29 [9/36] start imdb_roberta_ngd_2025_v2qi
+2026-07-09 08:40:31 [9/36] done imdb_roberta_ngd_2025_v2qi acc=0.92812 in 4742s
+2026-07-09 08:40:31 [10/36] start imdb_distilbert_ngd_42_v2qi
+2026-07-09 09:20:04 [10/36] done imdb_distilbert_ngd_42_v2qi acc=0.89912 in 2373s
+2026-07-09 09:20:04 [11/36] start imdb_distilbert_ngd_1337_v2qi
+2026-07-09 09:59:04 [11/36] done imdb_distilbert_ngd_1337_v2qi acc=0.90784 in 2340s
+2026-07-09 09:59:04 [12/36] start imdb_distilbert_ngd_2025_v2qi
+2026-07-09 10:38:13 [12/36] done imdb_distilbert_ngd_2025_v2qi acc=0.89532 in 2349s
+2026-07-09 10:38:13 [13/36] start ag_news_roberta_ngd_42_v2qi
+2026-07-09 14:55:48 [13/36] done ag_news_roberta_ngd_42_v2qi acc=0.9435526315789474 in 15456s
+2026-07-09 14:55:48 [14/36] start ag_news_roberta_ngd_1337_v2qi
+2026-07-09 19:14:47 [14/36] done ag_news_roberta_ngd_1337_v2qi acc=0.9467105263157894 in 15539s
+2026-07-09 19:14:47 [15/36] start ag_news_roberta_ngd_2025_v2qi
+2026-07-09 23:34:55 [15/36] done ag_news_roberta_ngd_2025_v2qi acc=0.9413157894736842 in 15608s
+2026-07-09 23:34:55 [16/36] start ag_news_distilbert_ngd_42_v2qi
+2026-07-10 01:43:52 [16/36] done ag_news_distilbert_ngd_42_v2qi acc=0.9403947368421053 in 7737s
+2026-07-10 01:43:52 [17/36] start ag_news_distilbert_ngd_1337_v2qi
+2026-07-10 03:52:27 [17/36] done ag_news_distilbert_ngd_1337_v2qi acc=0.9355263157894737 in 7714s
+2026-07-10 03:52:27 [18/36] start ag_news_distilbert_ngd_2025_v2qi
+2026-07-10 06:00:57 [18/36] done ag_news_distilbert_ngd_2025_v2qi acc=0.9352631578947368 in 7710s
+2026-07-10 06:00:57 [19/36] start sst2_lstm_qpso_42_v2qi
+2026-07-10 21:05:05 [19/36] done sst2_lstm_qpso_42_v2qi acc=0.4908256880733945 in 54249s
+2026-07-10 21:05:05 [20/36] start sst2_lstm_qpso_1337_v2qi
+2026-07-11 12:08:34 [20/36] done sst2_lstm_qpso_1337_v2qi acc=0.47477064220183485 in 54209s
+2026-07-11 12:08:34 [21/36] start sst2_lstm_qpso_2025_v2qi
+2026-07-11 21:58:59 queue=/home/azureuser/qmi-v2/queue/nlp_real_qi_trimmed.jsonl items=31
+2026-07-11 21:58:59 [21/31] start sst2_lstm_qpso_2025_v2qi
+2026-07-11 21:59:06 [21/31] FAILED sst2_lstm_qpso_2025_v2qi: RNG state must be a torch.ByteTensor
+2026-07-11 21:59:06 [22/31] start imdb_lstm_qpso_42_v2qi
+2026-07-11 22:02:42 queue=/home/azureuser/qmi-v2/queue/nlp_real_qi_trimmed.jsonl items=31
+2026-07-11 22:02:42 [21/31] start sst2_lstm_qpso_2025_v2qi
+2026-07-11 22:02:49 [21/31] FAILED sst2_lstm_qpso_2025_v2qi: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+2026-07-11 22:02:49 [22/31] start imdb_lstm_qpso_42_v2qi
+2026-07-11 22:06:36 queue=/home/azureuser/qmi-v2/queue/nlp_real_qi_trimmed.jsonl items=31
+2026-07-11 22:06:36 [21/31] start sst2_lstm_qpso_2025_v2qi
+2026-07-12 03:45:38 [21/31] done sst2_lstm_qpso_2025_v2qi acc=0.5080275229357798 in 20342s
+2026-07-12 03:45:38 [22/31] start imdb_lstm_qpso_42_v2qi
+2026-07-12 09:24:27 [22/31] done imdb_lstm_qpso_42_v2qi acc=0.50476 in 20329s
+2026-07-12 09:24:27 [23/31] start sst2_distilbert_spsa_42_v2qi
+2026-07-12 10:36:40 [23/31] done sst2_distilbert_spsa_42_v2qi acc=0.5091743119266054 in 4333s
+2026-07-12 10:36:40 [24/31] start sst2_roberta_spsa_42_v2qi
+2026-07-12 13:01:34 [24/31] done sst2_roberta_spsa_42_v2qi acc=0.5091743119266054 in 8694s
+2026-07-12 13:01:34 [25/31] start sst2_lstm_spsa_42_v2qi
+2026-07-12 13:24:18 [25/31] done sst2_lstm_spsa_42_v2qi acc=0.5057339449541285 in 1364s
+2026-07-12 13:24:18 [26/31] start imdb_distilbert_spsa_42_v2qi
+2026-07-12 14:03:15 [26/31] done imdb_distilbert_spsa_42_v2qi acc=0.4964 in 2337s
+2026-07-12 14:03:15 [27/31] start imdb_roberta_spsa_42_v2qi
+2026-07-12 15:20:38 [27/31] done imdb_roberta_spsa_42_v2qi acc=0.50004 in 4643s
+2026-07-12 15:20:38 [28/31] start imdb_lstm_spsa_42_v2qi
+2026-07-12 15:31:51 [28/31] done imdb_lstm_spsa_42_v2qi acc=0.49792 in 673s
+2026-07-12 15:31:51 [29/31] start ag_news_distilbert_spsa_42_v2qi
+2026-07-12 17:44:15 [29/31] done ag_news_distilbert_spsa_42_v2qi acc=0.6651315789473684 in 7944s
+2026-07-12 17:44:15 [30/31] start ag_news_roberta_spsa_42_v2qi
+2026-07-12 22:07:34 [30/31] done ag_news_roberta_spsa_42_v2qi acc=0.335 in 15799s
+2026-07-12 22:07:34 [31/31] start ag_news_lstm_spsa_42_v2qi
+2026-07-12 22:48:30 [31/31] done ag_news_lstm_spsa_42_v2qi acc=0.24894736842105264 in 2456s
+2026-07-12 22:48:30 queue finished: done=11 skipped=20 failed=0

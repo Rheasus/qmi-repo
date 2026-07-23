@@ -1,0 +1,31 @@
+{
+  "run_id": "ag_news_distilbert_ngd_123_v2qi",
+  "domain": "nlp",
+  "tag": "v2qi",
+  "dataset": "ag_news",
+  "model": "distilbert",
+  "optimizer": "ngd",
+  "arm_label": "ngd",
+  "seed": 123,
+  "lr": 2e-05,
+  "epochs": 3,
+  "batch_size": 16,
+  "opt_kwargs": {
+    "damping": 0.001
+  },
+  "test_accuracy": 0.935,
+  "test_loss": 0.23895844679419734,
+  "macro_f1": 0.9349322962551221,
+  "weighted_f1": 0.9349322962551221,
+  "macro_precision": 0.9369689174913586,
+  "macro_recall": 0.935,
+  "final_train_loss": 0.20799232130787956,
+  "final_train_acc": 0.9408833333333333,
+  "best_eval_acc": 0.935,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 3,
+  "training_time_seconds": 7334.225854873657,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

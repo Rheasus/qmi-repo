@@ -1,0 +1,298 @@
+2026-07-08 18:09:26 queue=/home/azureuser/qmi-v2/queue/tabular_mlp.jsonl items=105
+2026-07-08 18:09:26 [1/105] start adult_MLP_sgd_42_v2tab
+2026-07-08 18:10:55 [1/105] done adult_MLP_sgd_42_v2tab acc=0.8607888631090487 in 89s
+2026-07-08 18:10:55 [2/105] start adult_MLP_sgd_1337_v2tab
+2026-07-08 18:11:41 [2/105] done adult_MLP_sgd_1337_v2tab acc=0.8550566398253037 in 45s
+2026-07-08 18:11:41 [3/105] start adult_MLP_sgd_2025_v2tab
+2026-07-08 18:12:42 [3/105] done adult_MLP_sgd_2025_v2tab acc=0.8521905281834311 in 62s
+2026-07-08 18:12:42 [4/105] start adult_MLP_sgd_7_v2tab
+2026-07-08 18:13:21 [4/105] done adult_MLP_sgd_7_v2tab acc=0.8568308994131295 in 38s
+2026-07-08 18:13:21 [5/105] start adult_MLP_sgd_123_v2tab
+2026-07-08 18:14:25 [5/105] done adult_MLP_sgd_123_v2tab acc=0.8601064555752695 in 64s
+2026-07-08 18:14:25 [6/105] start adult_MLP_adam_42_v2tab
+2026-07-08 18:14:38 [6/105] done adult_MLP_adam_42_v2tab acc=0.8562849733861062 in 13s
+2026-07-08 18:14:38 [7/105] start adult_MLP_adam_1337_v2tab
+2026-07-08 18:14:53 [7/105] done adult_MLP_adam_1337_v2tab acc=0.8527364542104545 in 15s
+2026-07-08 18:14:53 [8/105] start adult_MLP_adam_2025_v2tab
+2026-07-08 18:15:06 [8/105] done adult_MLP_adam_2025_v2tab acc=0.8509621946226287 in 13s
+2026-07-08 18:15:06 [9/105] start adult_MLP_adam_7_v2tab
+2026-07-08 18:15:21 [9/105] done adult_MLP_adam_7_v2tab acc=0.8602429370820254 in 15s
+2026-07-08 18:15:21 [10/105] start adult_MLP_adam_123_v2tab
+2026-07-08 18:15:34 [10/105] done adult_MLP_adam_123_v2tab acc=0.8611983076293163 in 13s
+2026-07-08 18:15:34 [11/105] start adult_MLP_adamw_42_v2tab
+2026-07-08 18:15:48 [11/105] done adult_MLP_adamw_42_v2tab acc=0.8558755288658387 in 13s
+2026-07-08 18:15:48 [12/105] start adult_MLP_adamw_1337_v2tab
+2026-07-08 18:16:03 [12/105] done adult_MLP_adamw_1337_v2tab acc=0.8528729357172103 in 15s
+2026-07-08 18:16:03 [13/105] start adult_MLP_adamw_2025_v2tab
+2026-07-08 18:16:13 [13/105] done adult_MLP_adamw_2025_v2tab acc=0.8532823802374778 in 11s
+2026-07-08 18:16:13 [14/105] start adult_MLP_adamw_7_v2tab
+2026-07-08 18:16:30 [14/105] done adult_MLP_adamw_7_v2tab acc=0.8584686774941995 in 16s
+2026-07-08 18:16:30 [15/105] start adult_MLP_adamw_123_v2tab
+2026-07-08 18:16:43 [15/105] done adult_MLP_adamw_123_v2tab acc=0.8598334925617579 in 13s
+2026-07-08 18:16:43 [16/105] start adult_MLP_spsa_42_v2tab
+2026-07-08 18:18:02 [16/105] done adult_MLP_spsa_42_v2tab acc=0.760747918657022 in 79s
+2026-07-08 18:18:02 [17/105] start adult_MLP_spsa_1337_v2tab
+2026-07-08 18:19:21 [17/105] done adult_MLP_spsa_1337_v2tab acc=0.760747918657022 in 79s
+2026-07-08 18:19:21 [18/105] start adult_MLP_spsa_2025_v2tab
+2026-07-08 18:20:40 [18/105] done adult_MLP_spsa_2025_v2tab acc=0.760747918657022 in 79s
+2026-07-08 18:20:40 [19/105] start adult_MLP_spsa_7_v2tab
+2026-07-08 18:21:59 [19/105] done adult_MLP_spsa_7_v2tab acc=0.760747918657022 in 79s
+2026-07-08 18:21:59 [20/105] start adult_MLP_spsa_123_v2tab
+2026-07-08 18:23:18 [20/105] done adult_MLP_spsa_123_v2tab acc=0.760747918657022 in 79s
+2026-07-08 18:23:18 [21/105] start adult_MLP_ngd_42_v2tab
+2026-07-08 18:24:04 [21/105] done adult_MLP_ngd_42_v2tab acc=0.856421454892862 in 47s
+2026-07-08 18:24:04 [22/105] start adult_MLP_ngd_1337_v2tab
+2026-07-08 18:24:19 [22/105] done adult_MLP_ngd_1337_v2tab acc=0.8534188617442336 in 14s
+2026-07-08 18:24:19 [23/105] start adult_MLP_ngd_2025_v2tab
+2026-07-08 18:24:40 [23/105] done adult_MLP_ngd_2025_v2tab acc=0.8516446021564078 in 21s
+2026-07-08 18:24:40 [24/105] start adult_MLP_ngd_7_v2tab
+2026-07-08 18:25:04 [24/105] done adult_MLP_ngd_7_v2tab acc=0.8551931213320595 in 24s
+2026-07-08 18:25:04 [25/105] start adult_MLP_ngd_123_v2tab
+2026-07-08 18:25:20 [25/105] done adult_MLP_ngd_123_v2tab acc=0.8586051590009554 in 17s
+2026-07-08 18:25:20 [26/105] start adult_MLP_ctrl_qng_hp_42_v2tab
+2026-07-08 18:25:41 [26/105] done adult_MLP_ctrl_qng_hp_42_v2tab acc=0.8602429370820254 in 21s
+2026-07-08 18:25:41 [27/105] start adult_MLP_ctrl_qng_hp_1337_v2tab
+2026-07-08 18:25:56 [27/105] done adult_MLP_ctrl_qng_hp_1337_v2tab acc=0.8530094172239662 in 15s
+2026-07-08 18:25:56 [28/105] start adult_MLP_ctrl_qng_hp_2025_v2tab
+2026-07-08 18:26:15 [28/105] done adult_MLP_ctrl_qng_hp_2025_v2tab acc=0.8500068240753378 in 19s
+2026-07-08 18:26:15 [29/105] start adult_MLP_ctrl_qng_hp_7_v2tab
+2026-07-08 18:26:33 [29/105] done adult_MLP_ctrl_qng_hp_7_v2tab acc=0.8579227514671762 in 18s
+2026-07-08 18:26:33 [30/105] start adult_MLP_ctrl_qng_hp_123_v2tab
+2026-07-08 18:26:46 [30/105] done adult_MLP_ctrl_qng_hp_123_v2tab acc=0.8599699740685137 in 13s
+2026-07-08 18:26:46 [31/105] start adult_MLP_qpso_42_v2tab
+2026-07-08 18:27:42 [31/105] done adult_MLP_qpso_42_v2tab acc=0.7522860652381602 in 56s
+2026-07-08 18:27:42 [32/105] start adult_MLP_qpso_1337_v2tab
+2026-07-08 18:28:37 [32/105] done adult_MLP_qpso_1337_v2tab acc=0.7440971748328101 in 55s
+2026-07-08 18:28:37 [33/105] start adult_MLP_qpso_2025_v2tab
+2026-07-08 18:29:32 [33/105] done adult_MLP_qpso_2025_v2tab acc=0.7585642145489286 in 55s
+2026-07-08 18:29:32 [34/105] start adult_MLP_qpso_7_v2tab
+2026-07-08 18:30:28 [34/105] done adult_MLP_qpso_7_v2tab acc=0.6829534598061963 in 56s
+2026-07-08 18:30:28 [35/105] start adult_MLP_qpso_123_v2tab
+2026-07-08 18:31:24 [35/105] done adult_MLP_qpso_123_v2tab acc=0.7035621673263273 in 56s
+2026-07-08 18:31:24 [36/105] start higgs_MLP_sgd_42_v2tab
+2026-07-08 18:31:54 [36/105] FAILED higgs_MLP_sgd_42_v2tab: Dataset with data_id 23512 not found.
+2026-07-08 18:31:54 [37/105] start higgs_MLP_sgd_1337_v2tab
+2026-07-08 18:35:33 [37/105] done higgs_MLP_sgd_1337_v2tab acc=0.7170247484362252 in 220s
+2026-07-08 18:35:33 [38/105] start higgs_MLP_sgd_2025_v2tab
+2026-07-08 18:37:46 [38/105] done higgs_MLP_sgd_2025_v2tab acc=0.7186565134620615 in 133s
+2026-07-08 18:37:46 [39/105] start higgs_MLP_sgd_7_v2tab
+2026-07-08 18:39:58 [39/105] done higgs_MLP_sgd_7_v2tab acc=0.7200843078596683 in 133s
+2026-07-08 18:39:58 [40/105] start higgs_MLP_sgd_123_v2tab
+2026-07-08 18:42:11 [40/105] done higgs_MLP_sgd_123_v2tab acc=0.7213761218384552 in 133s
+2026-07-08 18:42:11 [41/105] start higgs_MLP_adam_42_v2tab
+2026-07-08 18:43:52 [41/105] done higgs_MLP_adam_42_v2tab acc=0.7262034267065542 in 101s
+2026-07-08 18:43:52 [42/105] start higgs_MLP_adam_1337_v2tab
+2026-07-08 18:45:26 [42/105] done higgs_MLP_adam_1337_v2tab acc=0.7228719064454718 in 95s
+2026-07-08 18:45:26 [43/105] start higgs_MLP_adam_2025_v2tab
+2026-07-08 18:46:58 [43/105] done higgs_MLP_adam_2025_v2tab acc=0.718452542833832 in 92s
+2026-07-08 18:46:58 [44/105] start higgs_MLP_adam_7_v2tab
+2026-07-08 18:47:52 [44/105] done higgs_MLP_adam_7_v2tab acc=0.7244356812618983 in 54s
+2026-07-08 18:47:52 [45/105] start higgs_MLP_adam_123_v2tab
+2026-07-08 18:49:24 [45/105] done higgs_MLP_adam_123_v2tab acc=0.7262034267065542 in 92s
+2026-07-08 18:49:24 [46/105] start higgs_MLP_adamw_42_v2tab
+2026-07-08 18:50:36 [46/105] done higgs_MLP_adamw_42_v2tab acc=0.7232798477019309 in 72s
+2026-07-08 18:50:36 [47/105] start higgs_MLP_adamw_1337_v2tab
+2026-07-08 18:51:54 [47/105] done higgs_MLP_adamw_1337_v2tab acc=0.7217840630949144 in 78s
+2026-07-08 18:51:54 [48/105] start higgs_MLP_adamw_2025_v2tab
+2026-07-08 18:53:47 [48/105] done higgs_MLP_adamw_2025_v2tab acc=0.7224639651890128 in 113s
+2026-07-08 18:53:47 [49/105] start higgs_MLP_adamw_7_v2tab
+2026-07-08 18:55:11 [49/105] done higgs_MLP_adamw_7_v2tab acc=0.7296029371770465 in 84s
+2026-07-08 18:55:11 [50/105] start higgs_MLP_adamw_123_v2tab
+2026-07-08 18:56:23 [50/105] done higgs_MLP_adamw_123_v2tab acc=0.7272912700571118 in 72s
+2026-07-08 18:56:23 [51/105] start higgs_MLP_spsa_42_v2tab
+2026-07-08 18:59:03 [51/105] done higgs_MLP_spsa_42_v2tab acc=0.5407261354364972 in 160s
+2026-07-08 18:59:03 [52/105] start higgs_MLP_spsa_1337_v2tab
+2026-07-08 19:01:43 [52/105] done higgs_MLP_spsa_1337_v2tab acc=0.5692140331792221 in 160s
+2026-07-08 19:01:43 [53/105] start higgs_MLP_spsa_2025_v2tab
+2026-07-08 19:04:24 [53/105] done higgs_MLP_spsa_2025_v2tab acc=0.5527604025020397 in 160s
+2026-07-08 19:04:24 [54/105] start higgs_MLP_spsa_7_v2tab
+2026-07-08 19:07:04 [54/105] done higgs_MLP_spsa_7_v2tab acc=0.5575197171607289 in 160s
+2026-07-08 19:07:04 [55/105] start higgs_MLP_spsa_123_v2tab
+2026-07-08 19:09:44 [55/105] done higgs_MLP_spsa_123_v2tab acc=0.5318194180038075 in 160s
+2026-07-08 19:09:44 [56/105] start higgs_MLP_ngd_42_v2tab
+2026-07-08 19:11:28 [56/105] done higgs_MLP_ngd_42_v2tab acc=0.702202882784879 in 104s
+2026-07-08 19:11:28 [57/105] start higgs_MLP_ngd_1337_v2tab
+2026-07-08 19:13:55 [57/105] done higgs_MLP_ngd_1337_v2tab acc=0.7147810715257003 in 147s
+2026-07-08 19:13:55 [58/105] start higgs_MLP_ngd_2025_v2tab
+2026-07-08 19:15:07 [58/105] done higgs_MLP_ngd_2025_v2tab acc=0.6996192548273049 in 72s
+2026-07-08 19:15:07 [59/105] start higgs_MLP_ngd_7_v2tab
+2026-07-08 19:15:55 [59/105] done higgs_MLP_ngd_7_v2tab acc=0.7024748436225183 in 48s
+2026-07-08 19:15:55 [60/105] start higgs_MLP_ngd_123_v2tab
+2026-07-08 19:16:47 [60/105] done higgs_MLP_ngd_123_v2tab acc=0.707030187652978 in 53s
+2026-07-08 19:16:47 [61/105] start higgs_MLP_ctrl_qng_hp_42_v2tab
+2026-07-08 19:18:26 [61/105] done higgs_MLP_ctrl_qng_hp_42_v2tab acc=0.7238237693772097 in 99s
+2026-07-08 19:18:26 [62/105] start higgs_MLP_ctrl_qng_hp_1337_v2tab
+2026-07-08 19:19:38 [62/105] done higgs_MLP_ctrl_qng_hp_1337_v2tab acc=0.7215121022572749 in 72s
+2026-07-08 19:19:38 [63/105] start higgs_MLP_ctrl_qng_hp_2025_v2tab
+2026-07-08 19:21:11 [63/105] done higgs_MLP_ctrl_qng_hp_2025_v2tab acc=0.7221240141419636 in 93s
+2026-07-08 19:21:11 [64/105] start higgs_MLP_ctrl_qng_hp_7_v2tab
+2026-07-08 19:22:35 [64/105] done higgs_MLP_ctrl_qng_hp_7_v2tab acc=0.7281071525700299 in 84s
+2026-07-08 19:22:35 [65/105] start higgs_MLP_ctrl_qng_hp_123_v2tab
+2026-07-08 19:24:16 [65/105] done higgs_MLP_ctrl_qng_hp_123_v2tab acc=0.7327304868098994 in 102s
+2026-07-08 19:24:16 [66/105] start higgs_MLP_qpso_42_v2tab
+2026-07-08 19:25:40 [66/105] done higgs_MLP_qpso_42_v2tab acc=0.5135300516725592 in 84s
+2026-07-08 19:25:40 [67/105] start higgs_MLP_qpso_1337_v2tab
+2026-07-08 19:27:04 [67/105] done higgs_MLP_qpso_1337_v2tab acc=0.4548545009518629 in 84s
+2026-07-08 19:27:04 [68/105] start higgs_MLP_qpso_2025_v2tab
+2026-07-08 19:28:28 [68/105] done higgs_MLP_qpso_2025_v2tab acc=0.5250883872722328 in 84s
+2026-07-08 19:28:28 [69/105] start higgs_MLP_qpso_7_v2tab
+2026-07-08 19:29:52 [69/105] done higgs_MLP_qpso_7_v2tab acc=0.4759314658689149 in 84s
+2026-07-08 19:29:52 [70/105] start higgs_MLP_qpso_123_v2tab
+2026-07-08 19:31:16 [70/105] done higgs_MLP_qpso_123_v2tab acc=0.4672967092738646 in 84s
+2026-07-08 19:31:16 [71/105] start california_housing_MLP_sgd_42_v2tab
+2026-07-08 19:31:44 [71/105] done california_housing_MLP_sgd_42_v2tab acc=None in 27s
+2026-07-08 19:31:44 [72/105] start california_housing_MLP_sgd_1337_v2tab
+2026-07-08 19:32:12 [72/105] done california_housing_MLP_sgd_1337_v2tab acc=None in 28s
+2026-07-08 19:32:12 [73/105] start california_housing_MLP_sgd_2025_v2tab
+2026-07-08 19:32:31 [73/105] done california_housing_MLP_sgd_2025_v2tab acc=None in 19s
+2026-07-08 19:32:31 [74/105] start california_housing_MLP_sgd_7_v2tab
+2026-07-08 19:32:51 [74/105] done california_housing_MLP_sgd_7_v2tab acc=None in 20s
+2026-07-08 19:32:51 [75/105] start california_housing_MLP_sgd_123_v2tab
+2026-07-08 19:33:14 [75/105] done california_housing_MLP_sgd_123_v2tab acc=None in 23s
+2026-07-08 19:33:14 [76/105] start california_housing_MLP_adam_42_v2tab
+2026-07-08 19:33:44 [76/105] done california_housing_MLP_adam_42_v2tab acc=None in 30s
+2026-07-08 19:33:44 [77/105] start california_housing_MLP_adam_1337_v2tab
+2026-07-08 19:34:03 [77/105] done california_housing_MLP_adam_1337_v2tab acc=None in 19s
+2026-07-08 19:34:03 [78/105] start california_housing_MLP_adam_2025_v2tab
+2026-07-08 19:34:23 [78/105] done california_housing_MLP_adam_2025_v2tab acc=None in 21s
+2026-07-08 19:34:23 [79/105] start california_housing_MLP_adam_7_v2tab
+2026-07-08 19:34:51 [79/105] done california_housing_MLP_adam_7_v2tab acc=None in 27s
+2026-07-08 19:34:51 [80/105] start california_housing_MLP_adam_123_v2tab
+2026-07-08 19:35:05 [80/105] done california_housing_MLP_adam_123_v2tab acc=None in 14s
+2026-07-08 19:35:05 [81/105] start california_housing_MLP_adamw_42_v2tab
+2026-07-08 19:35:22 [81/105] done california_housing_MLP_adamw_42_v2tab acc=None in 17s
+2026-07-08 19:35:22 [82/105] start california_housing_MLP_adamw_1337_v2tab
+2026-07-08 19:35:41 [82/105] done california_housing_MLP_adamw_1337_v2tab acc=None in 19s
+2026-07-08 19:35:41 [83/105] start california_housing_MLP_adamw_2025_v2tab
+2026-07-08 19:36:12 [83/105] done california_housing_MLP_adamw_2025_v2tab acc=None in 31s
+2026-07-08 19:36:12 [84/105] start california_housing_MLP_adamw_7_v2tab
+2026-07-08 19:36:41 [84/105] done california_housing_MLP_adamw_7_v2tab acc=None in 30s
+2026-07-08 19:36:41 [85/105] start california_housing_MLP_adamw_123_v2tab
+2026-07-08 19:37:01 [85/105] done california_housing_MLP_adamw_123_v2tab acc=None in 20s
+2026-07-08 19:37:01 [86/105] start california_housing_MLP_spsa_42_v2tab
+2026-07-08 19:37:05 [86/105] done california_housing_MLP_spsa_42_v2tab acc=None in 3s
+2026-07-08 19:37:05 [87/105] start california_housing_MLP_spsa_1337_v2tab
+2026-07-08 19:37:08 [87/105] done california_housing_MLP_spsa_1337_v2tab acc=None in 3s
+2026-07-08 19:37:08 [88/105] start california_housing_MLP_spsa_2025_v2tab
+2026-07-08 19:37:12 [88/105] done california_housing_MLP_spsa_2025_v2tab acc=None in 4s
+2026-07-08 19:37:12 [89/105] start california_housing_MLP_spsa_7_v2tab
+2026-07-08 19:37:15 [89/105] done california_housing_MLP_spsa_7_v2tab acc=None in 3s
+2026-07-08 19:37:15 [90/105] start california_housing_MLP_spsa_123_v2tab
+2026-07-08 19:37:19 [90/105] done california_housing_MLP_spsa_123_v2tab acc=None in 3s
+2026-07-08 19:37:19 [91/105] start california_housing_MLP_ngd_42_v2tab
+2026-07-08 19:37:44 [91/105] done california_housing_MLP_ngd_42_v2tab acc=None in 26s
+2026-07-08 19:37:44 [92/105] start california_housing_MLP_ngd_1337_v2tab
+2026-07-08 19:38:01 [92/105] done california_housing_MLP_ngd_1337_v2tab acc=None in 17s
+2026-07-08 19:38:01 [93/105] start california_housing_MLP_ngd_2025_v2tab
+2026-07-08 19:38:16 [93/105] done california_housing_MLP_ngd_2025_v2tab acc=None in 15s
+2026-07-08 19:38:16 [94/105] start california_housing_MLP_ngd_7_v2tab
+2026-07-08 19:38:34 [94/105] done california_housing_MLP_ngd_7_v2tab acc=None in 18s
+2026-07-08 19:38:34 [95/105] start california_housing_MLP_ngd_123_v2tab
+2026-07-08 19:38:52 [95/105] done california_housing_MLP_ngd_123_v2tab acc=None in 18s
+2026-07-08 19:38:52 [96/105] start california_housing_MLP_ctrl_qng_hp_42_v2tab
+2026-07-08 19:39:18 [96/105] done california_housing_MLP_ctrl_qng_hp_42_v2tab acc=None in 26s
+2026-07-08 19:39:18 [97/105] start california_housing_MLP_ctrl_qng_hp_1337_v2tab
+2026-07-08 19:39:50 [97/105] done california_housing_MLP_ctrl_qng_hp_1337_v2tab acc=None in 31s
+2026-07-08 19:39:50 [98/105] start california_housing_MLP_ctrl_qng_hp_2025_v2tab
+2026-07-08 19:40:21 [98/105] done california_housing_MLP_ctrl_qng_hp_2025_v2tab acc=None in 31s
+2026-07-08 19:40:21 [99/105] start california_housing_MLP_ctrl_qng_hp_7_v2tab
+2026-07-08 19:40:49 [99/105] done california_housing_MLP_ctrl_qng_hp_7_v2tab acc=None in 28s
+2026-07-08 19:40:49 [100/105] start california_housing_MLP_ctrl_qng_hp_123_v2tab
+2026-07-08 19:41:11 [100/105] done california_housing_MLP_ctrl_qng_hp_123_v2tab acc=None in 22s
+2026-07-08 19:41:11 [101/105] start california_housing_MLP_qpso_42_v2tab
+2026-07-08 19:41:36 [101/105] done california_housing_MLP_qpso_42_v2tab acc=None in 25s
+2026-07-08 19:41:36 [102/105] start california_housing_MLP_qpso_1337_v2tab
+2026-07-08 19:41:53 [102/105] done california_housing_MLP_qpso_1337_v2tab acc=None in 17s
+2026-07-08 19:41:53 [103/105] start california_housing_MLP_qpso_2025_v2tab
+2026-07-08 19:42:10 [103/105] done california_housing_MLP_qpso_2025_v2tab acc=None in 17s
+2026-07-08 19:42:10 [104/105] start california_housing_MLP_qpso_7_v2tab
+2026-07-08 19:42:26 [104/105] done california_housing_MLP_qpso_7_v2tab acc=None in 17s
+2026-07-08 19:42:26 [105/105] start california_housing_MLP_qpso_123_v2tab
+2026-07-08 19:42:43 [105/105] done california_housing_MLP_qpso_123_v2tab acc=None in 17s
+2026-07-08 19:42:43 queue finished: done=104 skipped=0 failed=1
+2026-07-08 19:42:44 queue=/home/azureuser/qmi-v2/queue/nlp_extra_seeds.jsonl items=18
+2026-07-08 19:42:44 [1/18] start sst2_roberta_adamw_7_v2seed
+2026-07-08 21:50:06 [1/18] done sst2_roberta_adamw_7_v2seed acc=0.9380733944954128 in 7642s
+2026-07-08 21:50:06 [2/18] start sst2_roberta_adamw_123_v2seed
+2026-07-08 23:57:32 [2/18] done sst2_roberta_adamw_123_v2seed acc=0.9243119266055045 in 7646s
+2026-07-08 23:57:32 [3/18] start sst2_roberta_adam_7_v2seed
+2026-07-09 02:04:27 [3/18] done sst2_roberta_adam_7_v2seed acc=0.9323394495412844 in 7615s
+2026-07-09 02:04:27 [4/18] start sst2_roberta_adam_123_v2seed
+2026-07-09 04:11:20 [4/18] done sst2_roberta_adam_123_v2seed acc=0.9243119266055045 in 7613s
+2026-07-09 04:11:20 [5/18] start sst2_roberta_ctrl_qng_hp_7_v2seed
+2026-07-09 06:18:47 [5/18] done sst2_roberta_ctrl_qng_hp_7_v2seed acc=0.9392201834862385 in 7647s
+2026-07-09 06:18:47 [6/18] start sst2_roberta_ctrl_qng_hp_123_v2seed
+2026-07-09 08:26:14 [6/18] done sst2_roberta_ctrl_qng_hp_123_v2seed acc=0.9392201834862385 in 7647s
+2026-07-09 08:26:14 [7/18] start imdb_roberta_adamw_7_v2seed
+2026-07-09 09:37:02 [7/18] done imdb_roberta_adamw_7_v2seed acc=0.93712 in 4249s
+2026-07-09 09:37:02 [8/18] start imdb_roberta_adamw_123_v2seed
+2026-07-09 10:47:51 [8/18] done imdb_roberta_adamw_123_v2seed acc=0.93624 in 4249s
+2026-07-09 10:47:51 [9/18] start imdb_roberta_adam_7_v2seed
+2026-07-09 11:58:23 [9/18] done imdb_roberta_adam_7_v2seed acc=0.92964 in 4232s
+2026-07-09 11:58:23 [10/18] start imdb_roberta_adam_123_v2seed
+2026-07-09 13:08:54 [10/18] done imdb_roberta_adam_123_v2seed acc=0.9374 in 4231s
+2026-07-09 13:08:54 [11/18] start imdb_roberta_ctrl_qng_hp_7_v2seed
+2026-07-09 14:19:39 [11/18] done imdb_roberta_ctrl_qng_hp_7_v2seed acc=0.93376 in 4245s
+2026-07-09 14:19:39 [12/18] start imdb_roberta_ctrl_qng_hp_123_v2seed
+2026-07-09 15:30:22 [12/18] done imdb_roberta_ctrl_qng_hp_123_v2seed acc=0.94092 in 4243s
+2026-07-09 15:30:22 [13/18] start ag_news_roberta_adamw_7_v2seed
+2026-07-09 19:24:22 [13/18] done ag_news_roberta_adamw_7_v2seed acc=0.9457894736842105 in 14040s
+2026-07-09 19:24:22 [14/18] start ag_news_roberta_adamw_123_v2seed
+2026-07-09 23:18:21 [14/18] done ag_news_roberta_adamw_123_v2seed acc=0.9463157894736842 in 14039s
+2026-07-09 23:18:21 [15/18] start ag_news_roberta_adam_7_v2seed
+2026-07-10 03:11:01 [15/18] done ag_news_roberta_adam_7_v2seed acc=0.9480263157894737 in 13960s
+2026-07-10 03:11:01 [16/18] start ag_news_roberta_adam_123_v2seed
+2026-07-10 07:03:42 [16/18] done ag_news_roberta_adam_123_v2seed acc=0.9481578947368421 in 13961s
+2026-07-10 07:03:42 [17/18] start ag_news_roberta_ctrl_qng_hp_7_v2seed
+2026-07-10 10:57:38 [17/18] done ag_news_roberta_ctrl_qng_hp_7_v2seed acc=0.9482894736842106 in 14036s
+2026-07-10 10:57:38 [18/18] start ag_news_roberta_ctrl_qng_hp_123_v2seed
+2026-07-10 14:51:31 [18/18] done ag_news_roberta_ctrl_qng_hp_123_v2seed acc=0.9501315789473684 in 14033s
+2026-07-10 14:51:31 queue finished: done=18 skipped=0 failed=0
+2026-07-11 21:59:02 queue=/home/azureuser/qmi-v2/queue/qpso_offload.jsonl items=2
+2026-07-11 21:59:02 [1/2] start imdb_lstm_qpso_1337_v2qi
+2026-07-11 22:02:44 queue=/home/azureuser/qmi-v2/queue/qpso_offload.jsonl items=2
+2026-07-11 22:02:44 [1/2] start imdb_lstm_qpso_1337_v2qi
+2026-07-11 22:06:24 queue=/home/azureuser/qmi-v2/queue/qpso_offload.jsonl items=2
+2026-07-11 22:06:24 [1/2] start imdb_lstm_qpso_1337_v2qi
+2026-07-12 03:44:48 [1/2] done imdb_lstm_qpso_1337_v2qi acc=0.49928 in 20304s
+2026-07-12 03:44:48 [2/2] start imdb_lstm_qpso_2025_v2qi
+2026-07-12 09:23:02 [2/2] done imdb_lstm_qpso_2025_v2qi acc=0.4996 in 20295s
+2026-07-12 09:23:02 queue finished: done=2 skipped=0 failed=0
+2026-07-12 09:23:03 queue=/home/azureuser/qmi-v2/queue/ngd_topup_roberta.jsonl items=6
+2026-07-12 09:23:03 [1/6] start sst2_roberta_ngd_7_v2qi
+2026-07-12 11:35:57 [1/6] done sst2_roberta_ngd_7_v2qi acc=0.9403669724770642 in 7974s
+2026-07-12 11:35:57 [2/6] start sst2_roberta_ngd_123_v2qi
+2026-07-12 13:48:49 [2/6] done sst2_roberta_ngd_123_v2qi acc=0.9357798165137615 in 7971s
+2026-07-12 13:48:49 [3/6] start imdb_roberta_ngd_7_v2qi
+2026-07-12 15:01:29 [3/6] done imdb_roberta_ngd_7_v2qi acc=0.93404 in 4361s
+2026-07-12 15:01:29 [4/6] start imdb_roberta_ngd_123_v2qi
+2026-07-12 16:14:04 [4/6] done imdb_roberta_ngd_123_v2qi acc=0.93568 in 4354s
+2026-07-12 16:14:04 [5/6] start ag_news_roberta_ngd_7_v2qi
+2026-07-12 20:16:41 [5/6] done ag_news_roberta_ngd_7_v2qi acc=0.9444736842105264 in 14557s
+2026-07-12 20:16:41 [6/6] start ag_news_roberta_ngd_123_v2qi
+2026-07-13 00:19:16 [6/6] done ag_news_roberta_ngd_123_v2qi acc=0.9413157894736842 in 14555s
+2026-07-13 00:19:16 queue finished: done=6 skipped=0 failed=0
+2026-07-13 00:19:17 queue=/home/azureuser/qmi-v2/queue/qpso_simplecnn.jsonl items=15
+2026-07-13 00:19:17 [1/15] start fashion_mnist_SimpleCNN_qpso_42_v2cvq
+2026-07-13 04:07:01 [1/15] done fashion_mnist_SimpleCNN_qpso_42_v2cvq acc=0.1606 in 13664s
+2026-07-13 04:07:01 [2/15] start fashion_mnist_SimpleCNN_qpso_1337_v2cvq
+2026-07-13 07:54:22 [2/15] done fashion_mnist_SimpleCNN_qpso_1337_v2cvq acc=0.2085 in 13641s
+2026-07-13 07:54:22 [3/15] start fashion_mnist_SimpleCNN_qpso_2025_v2cvq
+2026-07-13 11:41:24 [3/15] done fashion_mnist_SimpleCNN_qpso_2025_v2cvq acc=0.1114 in 13622s
+2026-07-13 11:41:24 [4/15] start fashion_mnist_SimpleCNN_qpso_7_v2cvq
+2026-07-13 15:28:15 [4/15] done fashion_mnist_SimpleCNN_qpso_7_v2cvq acc=0.1119 in 13611s
+2026-07-13 15:28:15 [5/15] start fashion_mnist_SimpleCNN_qpso_123_v2cvq
+2026-07-13 19:16:12 [5/15] done fashion_mnist_SimpleCNN_qpso_123_v2cvq acc=0.2168 in 13677s
+2026-07-13 19:16:12 [6/15] start cifar10_SimpleCNN_qpso_42_v2cvq
+2026-07-14 00:44:00 [6/15] done cifar10_SimpleCNN_qpso_42_v2cvq acc=0.1166 in 19668s
+2026-07-14 00:44:00 [7/15] start cifar10_SimpleCNN_qpso_1337_v2cvq
+2026-07-14 06:10:42 [7/15] done cifar10_SimpleCNN_qpso_1337_v2cvq acc=0.1242 in 19603s
+2026-07-14 06:10:42 [8/15] start cifar10_SimpleCNN_qpso_2025_v2cvq
+2026-07-14 11:01:47 queue=/home/azureuser/qmi-v2/queue/qpso_simplecnn.jsonl items=8
+2026-07-14 11:01:47 [8/8] start cifar10_SimpleCNN_qpso_2025_v2cvq
+2026-07-14 11:36:01 [8/8] done cifar10_SimpleCNN_qpso_2025_v2cvq acc=0.1142 in 2055s
+2026-07-14 11:36:01 queue finished: done=1 skipped=7 failed=0
+2026-07-14 11:36:02 queue=/home/azureuser/qmi-v2/queue/tabular_mlp.jsonl items=105
+2026-07-14 11:36:02 [36/105] start higgs_MLP_sgd_42_v2tab
+2026-07-14 11:38:22 [36/105] done higgs_MLP_sgd_42_v2tab acc=0.7157329344574381 in 140s
+2026-07-14 11:38:22 queue finished: done=1 skipped=104 failed=0

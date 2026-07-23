@@ -1,0 +1,31 @@
+{
+  "run_id": "imdb_roberta_spsa_42_v2qi",
+  "domain": "nlp",
+  "tag": "v2qi",
+  "dataset": "imdb",
+  "model": "roberta",
+  "optimizer": "spsa",
+  "arm_label": "spsa",
+  "seed": 42,
+  "lr": 0.001,
+  "epochs": 3,
+  "batch_size": 16,
+  "opt_kwargs": {
+    "c": 0.01
+  },
+  "test_accuracy": 0.50004,
+  "test_loss": 0.6933541800969701,
+  "macro_f1": 0.3334932949425471,
+  "weighted_f1": 0.3334932949425471,
+  "macro_precision": 0.5833433345334773,
+  "macro_recall": 0.50004,
+  "final_train_loss": 0.6948124034924913,
+  "final_train_acc": 0.49432,
+  "best_eval_acc": 0.50004,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 3,
+  "training_time_seconds": 4279.958910703659,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

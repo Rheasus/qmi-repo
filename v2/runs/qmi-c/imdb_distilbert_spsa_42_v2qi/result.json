@@ -1,0 +1,31 @@
+{
+  "run_id": "imdb_distilbert_spsa_42_v2qi",
+  "domain": "nlp",
+  "tag": "v2qi",
+  "dataset": "imdb",
+  "model": "distilbert",
+  "optimizer": "spsa",
+  "arm_label": "spsa",
+  "seed": 42,
+  "lr": 0.001,
+  "epochs": 3,
+  "batch_size": 16,
+  "opt_kwargs": {
+    "c": 0.01
+  },
+  "test_accuracy": 0.4964,
+  "test_loss": 0.6936528252823578,
+  "macro_f1": 0.48679577292551357,
+  "weighted_f1": 0.48679577292551357,
+  "macro_precision": 0.4961087098488035,
+  "macro_recall": 0.49639999999999995,
+  "final_train_loss": 0.6940440345634197,
+  "final_train_acc": 0.4918,
+  "best_eval_acc": 0.4964,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 3,
+  "training_time_seconds": 2150.508450984955,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

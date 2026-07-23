@@ -1,0 +1,31 @@
+{
+  "run_id": "ag_news_lstm_spsa_42_v2qi",
+  "domain": "nlp",
+  "tag": "v2qi",
+  "dataset": "ag_news",
+  "model": "lstm",
+  "optimizer": "spsa",
+  "arm_label": "spsa",
+  "seed": 42,
+  "lr": 0.001,
+  "epochs": 8,
+  "batch_size": 16,
+  "opt_kwargs": {
+    "c": 0.01
+  },
+  "test_accuracy": 0.24894736842105264,
+  "test_loss": 1.3869876150323563,
+  "macro_f1": 0.11414797241620299,
+  "weighted_f1": 0.11414797241620298,
+  "macro_precision": 0.17915398342700153,
+  "macro_recall": 0.2489473684210526,
+  "final_train_loss": 1.3870339695453644,
+  "final_train_acc": 0.24675833333333333,
+  "best_eval_acc": 0.2493421052631579,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 8,
+  "training_time_seconds": 2450.5084369182587,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

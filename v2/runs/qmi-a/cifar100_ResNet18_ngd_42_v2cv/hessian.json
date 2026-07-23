@@ -1,0 +1,20 @@
+{
+  "top_eigenvalues": [
+    337.7304382324219,
+    126.68173217773438,
+    100.01509857177734,
+    94.68925476074219,
+    63.31334686279297
+  ],
+  "lambda_max": 337.7304382324219,
+  "spectral_ratio_1_to_k": 5.334269233378566,
+  "trace": 2128.507779947917,
+  "trace_per_param": 0.0001895745831821834,
+  "n_params": 11227812,
+  "batch_size": 512,
+  "run_id": "cifar100_ResNet18_ngd_42_v2cv",
+  "arm": "ngd",
+  "dataset": "cifar100",
+  "model": "ResNet18",
+  "seed": 42
+}

@@ -1,0 +1,31 @@
+{
+  "run_id": "sst2_distilbert_ngd_1337_v2qi",
+  "domain": "nlp",
+  "tag": "v2qi",
+  "dataset": "sst2",
+  "model": "distilbert",
+  "optimizer": "ngd",
+  "arm_label": "ngd",
+  "seed": 1337,
+  "lr": 2e-05,
+  "epochs": 3,
+  "batch_size": 16,
+  "opt_kwargs": {
+    "damping": 0.001
+  },
+  "test_accuracy": 0.9013761467889908,
+  "test_loss": 0.3589937101517405,
+  "macro_f1": 0.9012883897497459,
+  "weighted_f1": 0.9013423940815889,
+  "macro_precision": 0.9016820184221065,
+  "macro_recall": 0.901132440852067,
+  "final_train_loss": 0.1881795297699788,
+  "final_train_acc": 0.9393754918410073,
+  "best_eval_acc": 0.9013761467889908,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 3,
+  "training_time_seconds": 4169.141984462738,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

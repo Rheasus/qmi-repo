@@ -1,0 +1,20 @@
+{
+  "top_eigenvalues": [
+    9.672032356262207,
+    8.694232940673828,
+    6.711633682250977,
+    6.435887813568115,
+    5.089043617248535
+  ],
+  "lambda_max": 9.672032356262207,
+  "spectral_ratio_1_to_k": 1.9005599251459218,
+  "trace": 194.8812245686849,
+  "trace_per_param": 1.7357008165855013e-05,
+  "n_params": 11227812,
+  "batch_size": 512,
+  "run_id": "cifar100_ResNet18_adam_1337_v2cv",
+  "arm": "adam",
+  "dataset": "cifar100",
+  "model": "ResNet18",
+  "seed": 1337
+}

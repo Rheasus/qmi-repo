@@ -1,0 +1,32 @@
+{
+  "run_id": "cifar100_ResNet18_spsa_1337_v2cv",
+  "domain": "cv",
+  "tag": "v2cv",
+  "dataset": "cifar100",
+  "model": "ResNet18",
+  "optimizer": "spsa",
+  "seed": 1337,
+  "lr": 0.01,
+  "epochs": 50,
+  "batch_size": 32,
+  "opt_kwargs": {
+    "c": 0.01
+  },
+  "test_accuracy": 0.0148,
+  "test_loss": 125.2212127685547,
+  "macro_f1": 0.01302444686983318,
+  "weighted_f1": 0.013024446869833178,
+  "macro_precision": 0.017781967416975863,
+  "macro_recall": 0.014800000000000002,
+  "final_train_loss": 121.97602399054705,
+  "final_train_acc": 1.5422222222222222,
+  "final_val_loss": 124.25010032653809,
+  "final_val_acc": 1.46,
+  "best_val_acc": 1.82,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 50,
+  "training_time_seconds": 1186.4916639328003,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

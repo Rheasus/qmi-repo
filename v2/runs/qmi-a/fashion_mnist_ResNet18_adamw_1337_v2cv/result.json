@@ -1,0 +1,32 @@
+{
+  "run_id": "fashion_mnist_ResNet18_adamw_1337_v2cv",
+  "domain": "cv",
+  "tag": "v2cv",
+  "dataset": "fashion_mnist",
+  "model": "ResNet18",
+  "optimizer": "adamw",
+  "seed": 1337,
+  "lr": 0.001,
+  "epochs": 50,
+  "batch_size": 32,
+  "opt_kwargs": {
+    "weight_decay": 0.01
+  },
+  "test_accuracy": 0.9107,
+  "test_loss": 0.43148333914577963,
+  "macro_f1": 0.9106033426478009,
+  "weighted_f1": 0.9106033426478009,
+  "macro_precision": 0.910713312967626,
+  "macro_recall": 0.9107,
+  "final_train_loss": 0.026242223120664276,
+  "final_train_acc": 99.12037037037037,
+  "final_val_loss": 0.3885313707093398,
+  "final_val_acc": 91.78333333333333,
+  "best_val_acc": 91.9,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 50,
+  "training_time_seconds": 1045.5205800533295,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

@@ -1,0 +1,31 @@
+{
+  "run_id": "sst2_roberta_ngd_2025_v2qi",
+  "domain": "nlp",
+  "tag": "v2qi",
+  "dataset": "sst2",
+  "model": "roberta",
+  "optimizer": "ngd",
+  "arm_label": "ngd",
+  "seed": 2025,
+  "lr": 2e-05,
+  "epochs": 3,
+  "batch_size": 16,
+  "opt_kwargs": {
+    "damping": 0.001
+  },
+  "test_accuracy": 0.9334862385321101,
+  "test_loss": 0.36250685527920723,
+  "macro_f1": 0.9334358153638813,
+  "weighted_f1": 0.9334694308093672,
+  "macro_precision": 0.9337336704593342,
+  "macro_recall": 0.933295444977688,
+  "final_train_loss": 0.20323287999654807,
+  "final_train_acc": 0.9402069815438983,
+  "best_eval_acc": 0.9392201834862385,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 3,
+  "training_time_seconds": 8428.150564670563,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

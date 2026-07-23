@@ -1,0 +1,31 @@
+{
+  "run_id": "sst2_lstm_qpso_2025_v2qi",
+  "domain": "nlp",
+  "tag": "v2qi",
+  "dataset": "sst2",
+  "model": "lstm",
+  "optimizer": "qpso",
+  "arm_label": "qpso",
+  "seed": 2025,
+  "lr": 0.0,
+  "epochs": 8,
+  "batch_size": 16,
+  "opt_kwargs": {
+    "n_particles": 10
+  },
+  "test_accuracy": 0.5080275229357798,
+  "test_loss": 49.25469044276646,
+  "macro_f1": 0.506937497281545,
+  "weighted_f1": 0.5073628731466122,
+  "macro_precision": 0.507375388213135,
+  "macro_recall": 0.507335606634672,
+  "final_train_loss": 17.641079978060837,
+  "final_train_acc": 0.5043578969249729,
+  "best_eval_acc": 0.5126146788990825,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 8,
+  "training_time_seconds": 54156.91846084595,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

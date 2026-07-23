@@ -1,0 +1,20 @@
+{
+  "top_eigenvalues": [
+    65.10902404785156,
+    8.051070213317871,
+    1.0995243787765503,
+    -1.5499794483184814,
+    1.2326817512512207
+  ],
+  "lambda_max": 65.10902404785156,
+  "spectral_ratio_1_to_k": 52.81900537731116,
+  "trace": 72.25803727308909,
+  "trace_per_param": 6.46582952269939e-06,
+  "n_params": 11175370,
+  "batch_size": 512,
+  "run_id": "fashion_mnist_ResNet18_ngd_2025_v2cv",
+  "arm": "ngd",
+  "dataset": "fashion_mnist",
+  "model": "ResNet18",
+  "seed": 2025
+}

@@ -1,0 +1,20 @@
+{
+  "top_eigenvalues": [
+    42.04899978637695,
+    33.135040283203125,
+    26.01266098022461,
+    23.915651321411133,
+    23.28443717956543
+  ],
+  "lambda_max": 42.04899978637695,
+  "spectral_ratio_1_to_k": 1.8058843107137423,
+  "trace": 507.5985056559245,
+  "trace_per_param": 4.54211811918464e-05,
+  "n_params": 11175370,
+  "batch_size": 512,
+  "run_id": "fashion_mnist_ResNet18_ctrl_qng_hp_42_v2cv",
+  "arm": "ctrl_qng_hp",
+  "dataset": "fashion_mnist",
+  "model": "ResNet18",
+  "seed": 42
+}

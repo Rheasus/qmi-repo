@@ -1,0 +1,5 @@
+__pycache__/
+*.pt
+.venv/
+v2/runs/datasets/
+v2/runs/smoke/

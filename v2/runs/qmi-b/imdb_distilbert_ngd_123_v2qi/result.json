@@ -1,0 +1,31 @@
+{
+  "run_id": "imdb_distilbert_ngd_123_v2qi",
+  "domain": "nlp",
+  "tag": "v2qi",
+  "dataset": "imdb",
+  "model": "distilbert",
+  "optimizer": "ngd",
+  "arm_label": "ngd",
+  "seed": 123,
+  "lr": 2e-05,
+  "epochs": 3,
+  "batch_size": 16,
+  "opt_kwargs": {
+    "damping": 0.001
+  },
+  "test_accuracy": 0.90704,
+  "test_loss": 0.2404534542942634,
+  "macro_f1": 0.9070394645473159,
+  "weighted_f1": 0.9070394645473158,
+  "macro_precision": 0.9070493784176787,
+  "macro_recall": 0.9070400000000001,
+  "final_train_loss": 0.230035739069565,
+  "final_train_acc": 0.91148,
+  "best_eval_acc": 0.90704,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 3,
+  "training_time_seconds": 2047.417052268982,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

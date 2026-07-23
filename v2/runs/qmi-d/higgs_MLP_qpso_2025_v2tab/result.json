@@ -1,0 +1,26 @@
+{
+  "run_id": "higgs_MLP_qpso_2025_v2tab",
+  "domain": "tabular",
+  "tag": "v2tab",
+  "dataset": "higgs",
+  "model": "MLP",
+  "task": "classification",
+  "optimizer": "qpso",
+  "seed": 2025,
+  "lr": 0.001,
+  "epochs_max": 50,
+  "completed_epochs": 6,
+  "batch_size": 32,
+  "opt_kwargs": {
+    "n_particles": 10
+  },
+  "final_train_loss": 5.750684270936571,
+  "best_val_loss": 0.7547948648189676,
+  "training_time_seconds": 82.9346296787262,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121",
+  "test_loss": 0.761437987459117,
+  "test_accuracy": 0.5250883872722328,
+  "test_macro_f1": 0.5229400621343485,
+  "test_roc_auc": 0.5333165624448798
+}

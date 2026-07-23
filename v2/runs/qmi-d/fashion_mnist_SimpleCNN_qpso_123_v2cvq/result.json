@@ -1,0 +1,32 @@
+{
+  "run_id": "fashion_mnist_SimpleCNN_qpso_123_v2cvq",
+  "domain": "cv",
+  "tag": "v2cvq",
+  "dataset": "fashion_mnist",
+  "model": "SimpleCNN",
+  "optimizer": "qpso",
+  "seed": 123,
+  "lr": 0.0,
+  "epochs": 50,
+  "batch_size": 32,
+  "opt_kwargs": {
+    "n_particles": 10
+  },
+  "test_accuracy": 0.2168,
+  "test_loss": 2.4455122649669647,
+  "macro_f1": 0.1501235682125593,
+  "weighted_f1": 0.1501235682125593,
+  "macro_precision": 0.14882468717557912,
+  "macro_recall": 0.21680000000000002,
+  "final_train_loss": 2.811165077850152,
+  "final_train_acc": 14.966666666666667,
+  "final_val_loss": 2.4512684643268585,
+  "final_val_acc": 20.95,
+  "best_val_acc": 20.95,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 50,
+  "training_time_seconds": 13658.273767232895,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

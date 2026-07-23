@@ -1,0 +1,31 @@
+{
+  "run_id": "imdb_roberta_ngd_42_v2qi",
+  "domain": "nlp",
+  "tag": "v2qi",
+  "dataset": "imdb",
+  "model": "roberta",
+  "optimizer": "ngd",
+  "arm_label": "ngd",
+  "seed": 42,
+  "lr": 2e-05,
+  "epochs": 3,
+  "batch_size": 16,
+  "opt_kwargs": {
+    "damping": 0.001
+  },
+  "test_accuracy": 0.9378,
+  "test_loss": 0.23434456386377134,
+  "macro_f1": 0.937797483933106,
+  "weighted_f1": 0.9377974839331061,
+  "macro_precision": 0.9378708468024193,
+  "macro_recall": 0.9378,
+  "final_train_loss": 0.1960214735245629,
+  "final_train_acc": 0.93992,
+  "best_eval_acc": 0.9378,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 3,
+  "training_time_seconds": 4355.1064467430115,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

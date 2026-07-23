@@ -1,0 +1,6 @@
+{"run_id": "sst2_distilbert_ngd_7_v2qi", "domain": "nlp", "tag": "v2qi", "dataset": "sst2", "model": "distilbert", "optimizer": "ngd", "seed": 7, "lr": 2e-05, "epochs": 3, "batch_size": 16, "opt_kwargs": {"damping": 0.001}}
+{"run_id": "sst2_distilbert_ngd_123_v2qi", "domain": "nlp", "tag": "v2qi", "dataset": "sst2", "model": "distilbert", "optimizer": "ngd", "seed": 123, "lr": 2e-05, "epochs": 3, "batch_size": 16, "opt_kwargs": {"damping": 0.001}}
+{"run_id": "imdb_distilbert_ngd_7_v2qi", "domain": "nlp", "tag": "v2qi", "dataset": "imdb", "model": "distilbert", "optimizer": "ngd", "seed": 7, "lr": 2e-05, "epochs": 3, "batch_size": 16, "opt_kwargs": {"damping": 0.001}}
+{"run_id": "imdb_distilbert_ngd_123_v2qi", "domain": "nlp", "tag": "v2qi", "dataset": "imdb", "model": "distilbert", "optimizer": "ngd", "seed": 123, "lr": 2e-05, "epochs": 3, "batch_size": 16, "opt_kwargs": {"damping": 0.001}}
+{"run_id": "ag_news_distilbert_ngd_7_v2qi", "domain": "nlp", "tag": "v2qi", "dataset": "ag_news", "model": "distilbert", "optimizer": "ngd", "seed": 7, "lr": 2e-05, "epochs": 3, "batch_size": 16, "opt_kwargs": {"damping": 0.001}}
+{"run_id": "ag_news_distilbert_ngd_123_v2qi", "domain": "nlp", "tag": "v2qi", "dataset": "ag_news", "model": "distilbert", "optimizer": "ngd", "seed": 123, "lr": 2e-05, "epochs": 3, "batch_size": 16, "opt_kwargs": {"damping": 0.001}}

@@ -1,0 +1,32 @@
+{
+  "run_id": "cifar100_SimpleCNN_adamw_7_v2cvx",
+  "domain": "cv",
+  "tag": "v2cvx",
+  "dataset": "cifar100",
+  "model": "SimpleCNN",
+  "optimizer": "adamw",
+  "seed": 7,
+  "lr": 0.001,
+  "epochs": 50,
+  "batch_size": 32,
+  "opt_kwargs": {
+    "weight_decay": 0.01
+  },
+  "test_accuracy": 0.4218,
+  "test_loss": 3.09196760058403,
+  "macro_f1": 0.42080641590441537,
+  "weighted_f1": 0.42080641590441537,
+  "macro_precision": 0.42550005894360443,
+  "macro_recall": 0.42179999999999995,
+  "final_train_loss": 0.7945987111025019,
+  "final_train_acc": 74.82444444444444,
+  "final_val_loss": 3.1789090752601625,
+  "final_val_acc": 41.099999999999994,
+  "best_val_acc": 43.8,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 50,
+  "training_time_seconds": 264.3393335342407,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

@@ -1,0 +1,31 @@
+{
+  "run_id": "sst2_roberta_adamw_lr1e5_wd005_1337_v2ctl",
+  "domain": "nlp",
+  "tag": "v2ctl",
+  "dataset": "sst2",
+  "model": "roberta",
+  "optimizer": "adamw",
+  "arm_label": "adamw_lr1e5_wd005",
+  "seed": 1337,
+  "lr": 1e-05,
+  "epochs": 3,
+  "batch_size": 16,
+  "opt_kwargs": {
+    "weight_decay": 0.05
+  },
+  "test_accuracy": 0.9426605504587156,
+  "test_loss": 0.19062255722071444,
+  "macro_f1": 0.9426361076757098,
+  "weighted_f1": 0.9426578345939371,
+  "macro_precision": 0.9426830038527128,
+  "macro_recall": 0.9425991411972721,
+  "final_train_loss": 0.1079941859438677,
+  "final_train_acc": 0.960994224116171,
+  "best_eval_acc": 0.9438073394495413,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 3,
+  "training_time_seconds": 7767.126269102097,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

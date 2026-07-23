@@ -1,0 +1,20 @@
+{
+  "top_eigenvalues": [
+    43.23674011230469,
+    35.84719467163086,
+    32.82302474975586,
+    29.71659278869629,
+    26.050521850585938
+  ],
+  "lambda_max": 43.23674011230469,
+  "spectral_ratio_1_to_k": 1.65972644848695,
+  "trace": 819.8098002115886,
+  "trace_per_param": 7.331747879350712e-05,
+  "n_params": 11181642,
+  "batch_size": 512,
+  "run_id": "cifar10_ResNet18_ctrl_qng_hp_1337_v2cv",
+  "arm": "ctrl_qng_hp",
+  "dataset": "cifar10",
+  "model": "ResNet18",
+  "seed": 1337
+}

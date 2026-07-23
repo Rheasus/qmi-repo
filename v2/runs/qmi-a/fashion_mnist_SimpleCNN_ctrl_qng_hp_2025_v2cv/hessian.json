@@ -1,0 +1,20 @@
+{
+  "top_eigenvalues": [
+    12.46117877960205,
+    10.286176681518555,
+    8.612783432006836,
+    7.861537456512451,
+    5.668333053588867
+  ],
+  "lambda_max": 12.46117877960205,
+  "spectral_ratio_1_to_k": 2.198385074023189,
+  "trace": 112.69954007466634,
+  "trace_per_param": 0.00016377462089677702,
+  "n_params": 688138,
+  "batch_size": 512,
+  "run_id": "fashion_mnist_SimpleCNN_ctrl_qng_hp_2025_v2cv",
+  "arm": "ctrl_qng_hp",
+  "dataset": "fashion_mnist",
+  "model": "SimpleCNN",
+  "seed": 2025
+}

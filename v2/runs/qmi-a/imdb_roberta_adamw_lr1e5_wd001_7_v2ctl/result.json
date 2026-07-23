@@ -1,0 +1,31 @@
+{
+  "run_id": "imdb_roberta_adamw_lr1e5_wd001_7_v2ctl",
+  "domain": "nlp",
+  "tag": "v2ctl",
+  "dataset": "imdb",
+  "model": "roberta",
+  "optimizer": "adamw",
+  "arm_label": "adamw_lr1e5_wd001",
+  "seed": 7,
+  "lr": 1e-05,
+  "epochs": 3,
+  "batch_size": 16,
+  "opt_kwargs": {
+    "weight_decay": 0.01
+  },
+  "test_accuracy": 0.93256,
+  "test_loss": 0.20059652169130246,
+  "macro_f1": 0.9324380811122464,
+  "weighted_f1": 0.9324380811122462,
+  "macro_precision": 0.9357050065755919,
+  "macro_recall": 0.9325600000000001,
+  "final_train_loss": 0.09126681433589885,
+  "final_train_acc": 0.96948,
+  "best_eval_acc": 0.93736,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 3,
+  "training_time_seconds": 3977.5191988945007,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

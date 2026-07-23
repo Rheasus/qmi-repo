@@ -1,0 +1,20 @@
+{
+  "top_eigenvalues": [
+    5.737687587738037,
+    4.077617645263672,
+    2.7932543754577637,
+    2.034052610397339,
+    1.758756399154663
+  ],
+  "lambda_max": 5.737687587738037,
+  "spectral_ratio_1_to_k": 3.2623549176542164,
+  "trace": 27.972249205907186,
+  "trace_per_param": 2.503026674365787e-06,
+  "n_params": 11175370,
+  "batch_size": 512,
+  "run_id": "fashion_mnist_ResNet18_adam_42_v2cv",
+  "arm": "adam",
+  "dataset": "fashion_mnist",
+  "model": "ResNet18",
+  "seed": 42
+}

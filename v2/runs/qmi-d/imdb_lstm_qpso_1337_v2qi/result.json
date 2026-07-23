@@ -1,0 +1,31 @@
+{
+  "run_id": "imdb_lstm_qpso_1337_v2qi",
+  "domain": "nlp",
+  "tag": "v2qi",
+  "dataset": "imdb",
+  "model": "lstm",
+  "optimizer": "qpso",
+  "arm_label": "qpso",
+  "seed": 1337,
+  "lr": 0.0,
+  "epochs": 8,
+  "batch_size": 16,
+  "opt_kwargs": {
+    "n_particles": 10
+  },
+  "test_accuracy": 0.49928,
+  "test_loss": 62.49806361674043,
+  "macro_f1": 0.4971475968581621,
+  "weighted_f1": 0.4971475968581621,
+  "macro_precision": 0.49926757629394075,
+  "macro_recall": 0.49928,
+  "final_train_loss": 14.392612654441683,
+  "final_train_acc": 0.49724,
+  "best_eval_acc": 0.49928,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 8,
+  "training_time_seconds": 20230.964614391327,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

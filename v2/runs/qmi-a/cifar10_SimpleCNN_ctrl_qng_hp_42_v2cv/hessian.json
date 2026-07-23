@@ -1,0 +1,20 @@
+{
+  "top_eigenvalues": [
+    39.42025375366211,
+    22.521347045898438,
+    20.399568557739258,
+    17.017786026000977,
+    13.852533340454102
+  ],
+  "lambda_max": 39.42025375366211,
+  "spectral_ratio_1_to_k": 2.8457071919503405,
+  "trace": 309.0248494466146,
+  "trace_per_param": 0.00026931068061852344,
+  "n_params": 1147466,
+  "batch_size": 512,
+  "run_id": "cifar10_SimpleCNN_ctrl_qng_hp_42_v2cv",
+  "arm": "ctrl_qng_hp",
+  "dataset": "cifar10",
+  "model": "SimpleCNN",
+  "seed": 42
+}

@@ -1,0 +1,1 @@
+[{"epoch": 1, "train_loss": NaN, "train_acc": 10.094444444444445, "val_loss": NaN, "val_acc": 10.016666666666667}, {"epoch": 2, "train_loss": NaN, "train_acc": 9.998148148148148, "val_loss": NaN, "val_acc": 10.016666666666667}, {"epoch": 3, "train_loss": NaN, "train_acc": 9.998148148148148, "val_loss": NaN, "val_acc": 10.016666666666667}]

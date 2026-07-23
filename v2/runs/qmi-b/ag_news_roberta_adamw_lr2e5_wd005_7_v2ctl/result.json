@@ -1,0 +1,31 @@
+{
+  "run_id": "ag_news_roberta_adamw_lr2e5_wd005_7_v2ctl",
+  "domain": "nlp",
+  "tag": "v2ctl",
+  "dataset": "ag_news",
+  "model": "roberta",
+  "optimizer": "adamw",
+  "arm_label": "adamw_lr2e5_wd005",
+  "seed": 7,
+  "lr": 2e-05,
+  "epochs": 3,
+  "batch_size": 16,
+  "opt_kwargs": {
+    "weight_decay": 0.05
+  },
+  "test_accuracy": 0.9461842105263157,
+  "test_loss": 0.1676457343983049,
+  "macro_f1": 0.9459563153470415,
+  "weighted_f1": 0.9459563153470414,
+  "macro_precision": 0.9460619895642226,
+  "macro_recall": 0.9461842105263157,
+  "final_train_loss": 0.11890168285636853,
+  "final_train_acc": 0.958775,
+  "best_eval_acc": 0.9471052631578948,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 3,
+  "training_time_seconds": 14224.729277849197,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

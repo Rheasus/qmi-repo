@@ -1,0 +1,20 @@
+{
+  "top_eigenvalues": [
+    195.14462280273438,
+    101.5770263671875,
+    69.22427368164062,
+    68.72409057617188,
+    61.777015686035156
+  ],
+  "lambda_max": 195.14462280273438,
+  "spectral_ratio_1_to_k": 3.1588548044227927,
+  "trace": 1557.9502075195312,
+  "trace_per_param": 0.0013052138235773144,
+  "n_params": 1193636,
+  "batch_size": 512,
+  "run_id": "cifar100_SimpleCNN_adam_1337_v2cv",
+  "arm": "adam",
+  "dataset": "cifar100",
+  "model": "SimpleCNN",
+  "seed": 1337
+}

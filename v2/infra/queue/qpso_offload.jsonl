@@ -1,0 +1,2 @@
+{"run_id": "imdb_lstm_qpso_1337_v2qi", "domain": "nlp", "tag": "v2qi", "dataset": "imdb", "model": "lstm", "optimizer": "qpso", "seed": 1337, "lr": 0.0, "epochs": 8, "batch_size": 16, "opt_kwargs": {"n_particles": 10}}
+{"run_id": "imdb_lstm_qpso_2025_v2qi", "domain": "nlp", "tag": "v2qi", "dataset": "imdb", "model": "lstm", "optimizer": "qpso", "seed": 2025, "lr": 0.0, "epochs": 8, "batch_size": 16, "opt_kwargs": {"n_particles": 10}}

@@ -1,0 +1,406 @@
+2026-07-08 18:09:18 queue=/home/azureuser/qmi-v2/queue/cv_rerun.jsonl items=108
+2026-07-08 18:09:18 [1/108] start fashion_mnist_SimpleCNN_sgd_42_v2cv
+2026-07-08 18:14:17 [1/108] done fashion_mnist_SimpleCNN_sgd_42_v2cv acc=0.9189 in 299s
+2026-07-08 18:14:17 [2/108] start fashion_mnist_SimpleCNN_sgd_1337_v2cv
+2026-07-08 18:19:03 [2/108] done fashion_mnist_SimpleCNN_sgd_1337_v2cv acc=0.9154 in 287s
+2026-07-08 18:19:03 [3/108] start fashion_mnist_SimpleCNN_sgd_2025_v2cv
+2026-07-08 18:23:50 [3/108] done fashion_mnist_SimpleCNN_sgd_2025_v2cv acc=0.9143 in 287s
+2026-07-08 18:23:50 [4/108] start fashion_mnist_SimpleCNN_adam_42_v2cv
+2026-07-08 18:28:39 [4/108] done fashion_mnist_SimpleCNN_adam_42_v2cv acc=0.9142 in 288s
+2026-07-08 18:28:39 [5/108] start fashion_mnist_SimpleCNN_adam_1337_v2cv
+2026-07-08 18:33:27 [5/108] done fashion_mnist_SimpleCNN_adam_1337_v2cv acc=0.9087 in 288s
+2026-07-08 18:33:27 [6/108] start fashion_mnist_SimpleCNN_adam_2025_v2cv
+2026-07-08 18:38:15 [6/108] done fashion_mnist_SimpleCNN_adam_2025_v2cv acc=0.9104 in 288s
+2026-07-08 18:38:15 [7/108] start fashion_mnist_SimpleCNN_adamw_42_v2cv
+2026-07-08 18:43:03 [7/108] done fashion_mnist_SimpleCNN_adamw_42_v2cv acc=0.9183 in 288s
+2026-07-08 18:43:03 [8/108] start fashion_mnist_SimpleCNN_adamw_1337_v2cv
+2026-07-08 18:47:51 [8/108] done fashion_mnist_SimpleCNN_adamw_1337_v2cv acc=0.909 in 288s
+2026-07-08 18:47:51 [9/108] start fashion_mnist_SimpleCNN_adamw_2025_v2cv
+2026-07-08 18:52:39 [9/108] done fashion_mnist_SimpleCNN_adamw_2025_v2cv acc=0.9142 in 288s
+2026-07-08 18:52:39 [10/108] start fashion_mnist_SimpleCNN_spsa_42_v2cv
+2026-07-08 18:54:57 [10/108] done fashion_mnist_SimpleCNN_spsa_42_v2cv acc=0.1 in 138s
+2026-07-08 18:54:57 [11/108] start fashion_mnist_SimpleCNN_spsa_1337_v2cv
+2026-07-08 18:56:01 [11/108] done fashion_mnist_SimpleCNN_spsa_1337_v2cv acc=0.1 in 64s
+2026-07-08 18:56:01 [12/108] start fashion_mnist_SimpleCNN_spsa_2025_v2cv
+2026-07-08 18:56:21 [12/108] done fashion_mnist_SimpleCNN_spsa_2025_v2cv acc=0.1 in 20s
+2026-07-08 18:56:21 [13/108] start fashion_mnist_SimpleCNN_ngd_42_v2cv
+2026-07-08 19:02:45 [13/108] done fashion_mnist_SimpleCNN_ngd_42_v2cv acc=0.9108 in 384s
+2026-07-08 19:02:45 [14/108] start fashion_mnist_SimpleCNN_ngd_1337_v2cv
+2026-07-08 19:09:10 [14/108] done fashion_mnist_SimpleCNN_ngd_1337_v2cv acc=0.9109 in 385s
+2026-07-08 19:09:10 [15/108] start fashion_mnist_SimpleCNN_ngd_2025_v2cv
+2026-07-08 19:15:35 [15/108] done fashion_mnist_SimpleCNN_ngd_2025_v2cv acc=0.914 in 385s
+2026-07-08 19:15:35 [16/108] start fashion_mnist_SimpleCNN_ctrl_qng_hp_42_v2cv
+2026-07-08 19:20:23 [16/108] done fashion_mnist_SimpleCNN_ctrl_qng_hp_42_v2cv acc=0.9205 in 289s
+2026-07-08 19:20:23 [17/108] start fashion_mnist_SimpleCNN_ctrl_qng_hp_1337_v2cv
+2026-07-08 19:25:19 [17/108] done fashion_mnist_SimpleCNN_ctrl_qng_hp_1337_v2cv acc=0.9172 in 296s
+2026-07-08 19:25:19 [18/108] start fashion_mnist_SimpleCNN_ctrl_qng_hp_2025_v2cv
+2026-07-08 19:30:07 [18/108] done fashion_mnist_SimpleCNN_ctrl_qng_hp_2025_v2cv acc=0.9178 in 288s
+2026-07-08 19:30:07 [19/108] start cifar10_SimpleCNN_sgd_42_v2cv
+2026-07-08 19:34:31 [19/108] done cifar10_SimpleCNN_sgd_42_v2cv acc=0.7786 in 264s
+2026-07-08 19:34:31 [20/108] start cifar10_SimpleCNN_sgd_1337_v2cv
+2026-07-08 19:38:55 [20/108] done cifar10_SimpleCNN_sgd_1337_v2cv acc=0.764 in 264s
+2026-07-08 19:38:55 [21/108] start cifar10_SimpleCNN_sgd_2025_v2cv
+2026-07-08 19:43:20 [21/108] done cifar10_SimpleCNN_sgd_2025_v2cv acc=0.7681 in 264s
+2026-07-08 19:43:20 [22/108] start cifar10_SimpleCNN_adam_42_v2cv
+2026-07-08 19:47:45 [22/108] done cifar10_SimpleCNN_adam_42_v2cv acc=0.7546 in 266s
+2026-07-08 19:47:45 [23/108] start cifar10_SimpleCNN_adam_1337_v2cv
+2026-07-08 19:52:11 [23/108] done cifar10_SimpleCNN_adam_1337_v2cv acc=0.7474 in 266s
+2026-07-08 19:52:11 [24/108] start cifar10_SimpleCNN_adam_2025_v2cv
+2026-07-08 19:56:36 [24/108] done cifar10_SimpleCNN_adam_2025_v2cv acc=0.7504 in 265s
+2026-07-08 19:56:36 [25/108] start cifar10_SimpleCNN_adamw_42_v2cv
+2026-07-08 20:01:02 [25/108] done cifar10_SimpleCNN_adamw_42_v2cv acc=0.7608 in 266s
+2026-07-08 20:01:02 [26/108] start cifar10_SimpleCNN_adamw_1337_v2cv
+2026-07-08 20:05:28 [26/108] done cifar10_SimpleCNN_adamw_1337_v2cv acc=0.7542 in 266s
+2026-07-08 20:05:28 [27/108] start cifar10_SimpleCNN_adamw_2025_v2cv
+2026-07-08 20:09:54 [27/108] done cifar10_SimpleCNN_adamw_2025_v2cv acc=0.7663 in 266s
+2026-07-08 20:09:54 [28/108] start cifar10_SimpleCNN_spsa_42_v2cv
+2026-07-08 20:14:29 [28/108] done cifar10_SimpleCNN_spsa_42_v2cv acc=0.1101 in 275s
+2026-07-08 20:14:29 [29/108] start cifar10_SimpleCNN_spsa_1337_v2cv
+2026-07-08 20:19:04 [29/108] done cifar10_SimpleCNN_spsa_1337_v2cv acc=0.2399 in 275s
+2026-07-08 20:19:04 [30/108] start cifar10_SimpleCNN_spsa_2025_v2cv
+2026-07-08 20:23:39 [30/108] done cifar10_SimpleCNN_spsa_2025_v2cv acc=0.1854 in 275s
+2026-07-08 20:23:39 [31/108] start cifar10_SimpleCNN_ngd_42_v2cv
+2026-07-08 20:29:34 [31/108] done cifar10_SimpleCNN_ngd_42_v2cv acc=0.776 in 355s
+2026-07-08 20:29:34 [32/108] start cifar10_SimpleCNN_ngd_1337_v2cv
+2026-07-08 20:35:29 [32/108] done cifar10_SimpleCNN_ngd_1337_v2cv acc=0.7591 in 355s
+2026-07-08 20:35:29 [33/108] start cifar10_SimpleCNN_ngd_2025_v2cv
+2026-07-08 20:41:24 [33/108] done cifar10_SimpleCNN_ngd_2025_v2cv acc=0.7618 in 355s
+2026-07-08 20:41:24 [34/108] start cifar10_SimpleCNN_ctrl_qng_hp_42_v2cv
+2026-07-08 20:45:49 [34/108] done cifar10_SimpleCNN_ctrl_qng_hp_42_v2cv acc=0.7694 in 266s
+2026-07-08 20:45:49 [35/108] start cifar10_SimpleCNN_ctrl_qng_hp_1337_v2cv
+2026-07-08 20:50:15 [35/108] done cifar10_SimpleCNN_ctrl_qng_hp_1337_v2cv acc=0.767 in 265s
+2026-07-08 20:50:15 [36/108] start cifar10_SimpleCNN_ctrl_qng_hp_2025_v2cv
+2026-07-08 20:54:41 [36/108] done cifar10_SimpleCNN_ctrl_qng_hp_2025_v2cv acc=0.7713 in 266s
+2026-07-08 20:54:41 [37/108] start cifar100_SimpleCNN_sgd_42_v2cv
+2026-07-08 20:59:10 [37/108] done cifar100_SimpleCNN_sgd_42_v2cv acc=0.4423 in 270s
+2026-07-08 20:59:10 [38/108] start cifar100_SimpleCNN_sgd_1337_v2cv
+2026-07-08 21:03:32 [38/108] done cifar100_SimpleCNN_sgd_1337_v2cv acc=0.4402 in 262s
+2026-07-08 21:03:32 [39/108] start cifar100_SimpleCNN_sgd_2025_v2cv
+2026-07-08 21:07:53 [39/108] done cifar100_SimpleCNN_sgd_2025_v2cv acc=0.4457 in 261s
+2026-07-08 21:07:53 [40/108] start cifar100_SimpleCNN_adam_42_v2cv
+2026-07-08 21:12:16 [40/108] done cifar100_SimpleCNN_adam_42_v2cv acc=0.387 in 263s
+2026-07-08 21:12:16 [41/108] start cifar100_SimpleCNN_adam_1337_v2cv
+2026-07-08 21:16:39 [41/108] done cifar100_SimpleCNN_adam_1337_v2cv acc=0.3992 in 263s
+2026-07-08 21:16:39 [42/108] start cifar100_SimpleCNN_adam_2025_v2cv
+2026-07-08 21:21:03 [42/108] done cifar100_SimpleCNN_adam_2025_v2cv acc=0.3889 in 264s
+2026-07-08 21:21:03 [43/108] start cifar100_SimpleCNN_adamw_42_v2cv
+2026-07-08 21:25:26 [43/108] done cifar100_SimpleCNN_adamw_42_v2cv acc=0.4141 in 264s
+2026-07-08 21:25:26 [44/108] start cifar100_SimpleCNN_adamw_1337_v2cv
+2026-07-08 21:29:50 [44/108] done cifar100_SimpleCNN_adamw_1337_v2cv acc=0.4158 in 264s
+2026-07-08 21:29:50 [45/108] start cifar100_SimpleCNN_adamw_2025_v2cv
+2026-07-08 21:34:13 [45/108] done cifar100_SimpleCNN_adamw_2025_v2cv acc=0.4169 in 263s
+2026-07-08 21:34:13 [46/108] start cifar100_SimpleCNN_spsa_42_v2cv
+2026-07-08 21:38:44 [46/108] done cifar100_SimpleCNN_spsa_42_v2cv acc=0.0083 in 271s
+2026-07-08 21:38:44 [47/108] start cifar100_SimpleCNN_spsa_1337_v2cv
+2026-07-08 21:43:14 [47/108] done cifar100_SimpleCNN_spsa_1337_v2cv acc=0.0125 in 270s
+2026-07-08 21:43:14 [48/108] start cifar100_SimpleCNN_spsa_2025_v2cv
+2026-07-08 21:43:32 [48/108] done cifar100_SimpleCNN_spsa_2025_v2cv acc=0.01 in 17s
+2026-07-08 21:43:32 [49/108] start cifar100_SimpleCNN_ngd_42_v2cv
+2026-07-08 21:49:23 [49/108] done cifar100_SimpleCNN_ngd_42_v2cv acc=0.4491 in 351s
+2026-07-08 21:49:23 [50/108] start cifar100_SimpleCNN_ngd_1337_v2cv
+2026-07-08 21:55:15 [50/108] done cifar100_SimpleCNN_ngd_1337_v2cv acc=0.4426 in 352s
+2026-07-08 21:55:15 [51/108] start cifar100_SimpleCNN_ngd_2025_v2cv
+2026-07-08 22:01:07 [51/108] done cifar100_SimpleCNN_ngd_2025_v2cv acc=0.4457 in 352s
+2026-07-08 22:01:07 [52/108] start cifar100_SimpleCNN_ctrl_qng_hp_42_v2cv
+2026-07-08 22:05:31 [52/108] done cifar100_SimpleCNN_ctrl_qng_hp_42_v2cv acc=0.4556 in 264s
+2026-07-08 22:05:31 [53/108] start cifar100_SimpleCNN_ctrl_qng_hp_1337_v2cv
+2026-07-08 22:09:55 [53/108] done cifar100_SimpleCNN_ctrl_qng_hp_1337_v2cv acc=0.4485 in 264s
+2026-07-08 22:09:55 [54/108] start cifar100_SimpleCNN_ctrl_qng_hp_2025_v2cv
+2026-07-08 22:14:20 [54/108] done cifar100_SimpleCNN_ctrl_qng_hp_2025_v2cv acc=0.46 in 265s
+2026-07-08 22:14:20 [55/108] start fashion_mnist_ResNet18_sgd_42_v2cv
+2026-07-08 22:29:45 [55/108] done fashion_mnist_ResNet18_sgd_42_v2cv acc=0.9119 in 925s
+2026-07-08 22:29:45 [56/108] start fashion_mnist_ResNet18_sgd_1337_v2cv
+2026-07-08 22:45:11 [56/108] done fashion_mnist_ResNet18_sgd_1337_v2cv acc=0.9068 in 926s
+2026-07-08 22:45:11 [57/108] start fashion_mnist_ResNet18_sgd_2025_v2cv
+2026-07-08 23:00:17 [57/108] done fashion_mnist_ResNet18_sgd_2025_v2cv acc=0.9074 in 906s
+2026-07-08 23:00:17 [58/108] start fashion_mnist_ResNet18_adam_42_v2cv
+2026-07-08 23:17:44 [58/108] done fashion_mnist_ResNet18_adam_42_v2cv acc=0.9132 in 1047s
+2026-07-08 23:17:44 [59/108] start fashion_mnist_ResNet18_adam_1337_v2cv
+2026-07-08 23:35:20 [59/108] done fashion_mnist_ResNet18_adam_1337_v2cv acc=0.9131 in 1056s
+2026-07-08 23:35:20 [60/108] start fashion_mnist_ResNet18_adam_2025_v2cv
+2026-07-08 23:52:50 [60/108] done fashion_mnist_ResNet18_adam_2025_v2cv acc=0.9091 in 1049s
+2026-07-08 23:52:50 [61/108] start fashion_mnist_ResNet18_adamw_42_v2cv
+2026-07-09 00:10:50 [61/108] done fashion_mnist_ResNet18_adamw_42_v2cv acc=0.9103 in 1081s
+2026-07-09 00:10:50 [62/108] start fashion_mnist_ResNet18_adamw_1337_v2cv
+2026-07-09 00:28:47 [62/108] done fashion_mnist_ResNet18_adamw_1337_v2cv acc=0.9107 in 1077s
+2026-07-09 00:28:47 [63/108] start fashion_mnist_ResNet18_adamw_2025_v2cv
+2026-07-09 00:46:50 [63/108] done fashion_mnist_ResNet18_adamw_2025_v2cv acc=0.9103 in 1083s
+2026-07-09 00:46:50 [64/108] start fashion_mnist_ResNet18_spsa_42_v2cv
+2026-07-09 01:10:43 [64/108] done fashion_mnist_ResNet18_spsa_42_v2cv acc=0.6063 in 1433s
+2026-07-09 01:10:43 [65/108] start fashion_mnist_ResNet18_spsa_1337_v2cv
+2026-07-09 01:34:38 [65/108] done fashion_mnist_ResNet18_spsa_1337_v2cv acc=0.6038 in 1435s
+2026-07-09 01:34:38 [66/108] start fashion_mnist_ResNet18_spsa_2025_v2cv
+2026-07-09 01:58:31 [66/108] done fashion_mnist_ResNet18_spsa_2025_v2cv acc=0.6021 in 1433s
+2026-07-09 01:58:31 [67/108] start fashion_mnist_ResNet18_ngd_42_v2cv
+2026-07-09 02:26:51 [67/108] done fashion_mnist_ResNet18_ngd_42_v2cv acc=0.9148 in 1700s
+2026-07-09 02:26:51 [68/108] start fashion_mnist_ResNet18_ngd_1337_v2cv
+2026-07-09 02:55:12 [68/108] done fashion_mnist_ResNet18_ngd_1337_v2cv acc=0.9185 in 1701s
+2026-07-09 02:55:12 [69/108] start fashion_mnist_ResNet18_ngd_2025_v2cv
+2026-07-09 03:23:35 [69/108] done fashion_mnist_ResNet18_ngd_2025_v2cv acc=0.9154 in 1703s
+2026-07-09 03:23:35 [70/108] start fashion_mnist_ResNet18_ctrl_qng_hp_42_v2cv
+2026-07-09 03:41:38 [70/108] done fashion_mnist_ResNet18_ctrl_qng_hp_42_v2cv acc=0.9052 in 1083s
+2026-07-09 03:41:38 [71/108] start fashion_mnist_ResNet18_ctrl_qng_hp_1337_v2cv
+2026-07-09 03:59:34 [71/108] done fashion_mnist_ResNet18_ctrl_qng_hp_1337_v2cv acc=0.9048 in 1076s
+2026-07-09 03:59:34 [72/108] start fashion_mnist_ResNet18_ctrl_qng_hp_2025_v2cv
+2026-07-09 04:17:33 [72/108] done fashion_mnist_ResNet18_ctrl_qng_hp_2025_v2cv acc=0.9073 in 1079s
+2026-07-09 04:17:33 [73/108] start cifar10_ResNet18_sgd_42_v2cv
+2026-07-09 04:30:23 [73/108] done cifar10_ResNet18_sgd_42_v2cv acc=0.7167 in 770s
+2026-07-09 04:30:23 [74/108] start cifar10_ResNet18_sgd_1337_v2cv
+2026-07-09 04:43:13 [74/108] done cifar10_ResNet18_sgd_1337_v2cv acc=0.7073 in 769s
+2026-07-09 04:43:13 [75/108] start cifar10_ResNet18_sgd_2025_v2cv
+2026-07-09 04:56:00 [75/108] done cifar10_ResNet18_sgd_2025_v2cv acc=0.7035 in 768s
+2026-07-09 04:56:00 [76/108] start cifar10_ResNet18_adam_42_v2cv
+2026-07-09 05:11:02 [76/108] done cifar10_ResNet18_adam_42_v2cv acc=0.7685 in 902s
+2026-07-09 05:11:02 [77/108] start cifar10_ResNet18_adam_1337_v2cv
+2026-07-09 05:26:01 [77/108] done cifar10_ResNet18_adam_1337_v2cv acc=0.7732 in 899s
+2026-07-09 05:26:01 [78/108] start cifar10_ResNet18_adam_2025_v2cv
+2026-07-09 05:40:59 [78/108] done cifar10_ResNet18_adam_2025_v2cv acc=0.7697 in 898s
+2026-07-09 05:40:59 [79/108] start cifar10_ResNet18_adamw_42_v2cv
+2026-07-09 05:56:18 [79/108] done cifar10_ResNet18_adamw_42_v2cv acc=0.7657 in 919s
+2026-07-09 05:56:18 [80/108] start cifar10_ResNet18_adamw_1337_v2cv
+2026-07-09 06:11:43 [80/108] done cifar10_ResNet18_adamw_1337_v2cv acc=0.7597 in 924s
+2026-07-09 06:11:43 [81/108] start cifar10_ResNet18_adamw_2025_v2cv
+2026-07-09 06:27:13 [81/108] done cifar10_ResNet18_adamw_2025_v2cv acc=0.7601 in 930s
+2026-07-09 06:27:13 [82/108] start cifar10_ResNet18_spsa_42_v2cv
+2026-07-09 06:47:14 [82/108] done cifar10_ResNet18_spsa_42_v2cv acc=0.1707 in 1201s
+2026-07-09 06:47:14 [83/108] start cifar10_ResNet18_spsa_1337_v2cv
+2026-07-09 07:07:18 [83/108] done cifar10_ResNet18_spsa_1337_v2cv acc=0.1724 in 1204s
+2026-07-09 07:07:18 [84/108] start cifar10_ResNet18_spsa_2025_v2cv
+2026-07-09 07:27:17 [84/108] done cifar10_ResNet18_spsa_2025_v2cv acc=0.1744 in 1198s
+2026-07-09 07:27:17 [85/108] start cifar10_ResNet18_ngd_42_v2cv
+2026-07-09 07:52:07 [85/108] done cifar10_ResNet18_ngd_42_v2cv acc=0.7478 in 1490s
+2026-07-09 07:52:07 [86/108] start cifar10_ResNet18_ngd_1337_v2cv
+2026-07-09 08:16:54 [86/108] done cifar10_ResNet18_ngd_1337_v2cv acc=0.754 in 1487s
+2026-07-09 08:16:54 [87/108] start cifar10_ResNet18_ngd_2025_v2cv
+2026-07-09 08:41:38 [87/108] done cifar10_ResNet18_ngd_2025_v2cv acc=0.7602 in 1484s
+2026-07-09 08:41:38 [88/108] start cifar10_ResNet18_ctrl_qng_hp_42_v2cv
+2026-07-09 08:57:00 [88/108] done cifar10_ResNet18_ctrl_qng_hp_42_v2cv acc=0.7526 in 922s
+2026-07-09 08:57:00 [89/108] start cifar10_ResNet18_ctrl_qng_hp_1337_v2cv
+2026-07-09 09:12:20 [89/108] done cifar10_ResNet18_ctrl_qng_hp_1337_v2cv acc=0.7496 in 919s
+2026-07-09 09:12:20 [90/108] start cifar10_ResNet18_ctrl_qng_hp_2025_v2cv
+2026-07-09 09:27:39 [90/108] done cifar10_ResNet18_ctrl_qng_hp_2025_v2cv acc=0.7485 in 919s
+2026-07-09 09:27:39 [91/108] start cifar100_ResNet18_sgd_42_v2cv
+2026-07-09 09:40:29 [91/108] done cifar100_ResNet18_sgd_42_v2cv acc=0.3833 in 771s
+2026-07-09 09:40:29 [92/108] start cifar100_ResNet18_sgd_1337_v2cv
+2026-07-09 09:53:20 [92/108] done cifar100_ResNet18_sgd_1337_v2cv acc=0.3907 in 771s
+2026-07-09 09:53:20 [93/108] start cifar100_ResNet18_sgd_2025_v2cv
+2026-07-09 10:06:10 [93/108] done cifar100_ResNet18_sgd_2025_v2cv acc=0.3857 in 770s
+2026-07-09 10:06:10 [94/108] start cifar100_ResNet18_adam_42_v2cv
+2026-07-09 10:21:10 [94/108] done cifar100_ResNet18_adam_42_v2cv acc=0.4414 in 900s
+2026-07-09 10:21:10 [95/108] start cifar100_ResNet18_adam_1337_v2cv
+2026-07-09 10:36:13 [95/108] done cifar100_ResNet18_adam_1337_v2cv acc=0.4312 in 903s
+2026-07-09 10:36:13 [96/108] start cifar100_ResNet18_adam_2025_v2cv
+2026-07-09 10:51:13 [96/108] done cifar100_ResNet18_adam_2025_v2cv acc=0.4372 in 900s
+2026-07-09 10:51:13 [97/108] start cifar100_ResNet18_adamw_42_v2cv
+2026-07-09 11:06:37 [97/108] done cifar100_ResNet18_adamw_42_v2cv acc=0.4317 in 923s
+2026-07-09 11:06:37 [98/108] start cifar100_ResNet18_adamw_1337_v2cv
+2026-07-09 11:21:57 [98/108] done cifar100_ResNet18_adamw_1337_v2cv acc=0.429 in 920s
+2026-07-09 11:21:57 [99/108] start cifar100_ResNet18_adamw_2025_v2cv
+2026-07-09 11:37:22 [99/108] done cifar100_ResNet18_adamw_2025_v2cv acc=0.4359 in 925s
+2026-07-09 11:37:22 [100/108] start cifar100_ResNet18_spsa_42_v2cv
+2026-07-09 11:57:24 [100/108] done cifar100_ResNet18_spsa_42_v2cv acc=0.0166 in 1202s
+2026-07-09 11:57:24 [101/108] start cifar100_ResNet18_spsa_1337_v2cv
+2026-07-09 12:17:26 [101/108] done cifar100_ResNet18_spsa_1337_v2cv acc=0.0148 in 1202s
+2026-07-09 12:17:26 [102/108] start cifar100_ResNet18_spsa_2025_v2cv
+2026-07-09 12:37:27 [102/108] done cifar100_ResNet18_spsa_2025_v2cv acc=0.0136 in 1201s
+2026-07-09 12:37:27 [103/108] start cifar100_ResNet18_ngd_42_v2cv
+2026-07-09 13:02:45 [103/108] done cifar100_ResNet18_ngd_42_v2cv acc=0.4198 in 1518s
+2026-07-09 13:02:45 [104/108] start cifar100_ResNet18_ngd_1337_v2cv
+2026-07-09 13:28:13 [104/108] done cifar100_ResNet18_ngd_1337_v2cv acc=0.4203 in 1528s
+2026-07-09 13:28:13 [105/108] start cifar100_ResNet18_ngd_2025_v2cv
+2026-07-09 13:53:34 [105/108] done cifar100_ResNet18_ngd_2025_v2cv acc=0.4158 in 1522s
+2026-07-09 13:53:34 [106/108] start cifar100_ResNet18_ctrl_qng_hp_42_v2cv
+2026-07-09 14:09:00 [106/108] done cifar100_ResNet18_ctrl_qng_hp_42_v2cv acc=0.4144 in 926s
+2026-07-09 14:09:00 [107/108] start cifar100_ResNet18_ctrl_qng_hp_1337_v2cv
+2026-07-09 14:24:23 [107/108] done cifar100_ResNet18_ctrl_qng_hp_1337_v2cv acc=0.4174 in 923s
+2026-07-09 14:24:23 [108/108] start cifar100_ResNet18_ctrl_qng_hp_2025_v2cv
+2026-07-09 14:39:50 [108/108] done cifar100_ResNet18_ctrl_qng_hp_2025_v2cv acc=0.43 in 927s
+2026-07-09 14:39:50 queue finished: done=108 skipped=0 failed=0
+2026-07-11 21:58:55 queue=/home/azureuser/qmi-v2/queue/cv_extra_seeds.jsonl items=72
+2026-07-11 21:58:55 [1/72] start fashion_mnist_SimpleCNN_sgd_7_v2cvx
+2026-07-11 22:02:38 queue=/home/azureuser/qmi-v2/queue/cv_extra_seeds.jsonl items=72
+2026-07-11 22:02:38 [1/72] start fashion_mnist_SimpleCNN_sgd_7_v2cvx
+2026-07-11 22:03:51 [1/72] done fashion_mnist_SimpleCNN_sgd_7_v2cvx acc=0.9157 in 73s
+2026-07-11 22:03:51 [2/72] start fashion_mnist_SimpleCNN_sgd_123_v2cvx
+2026-07-11 22:08:38 [2/72] done fashion_mnist_SimpleCNN_sgd_123_v2cvx acc=0.916 in 287s
+2026-07-11 22:08:38 [3/72] start fashion_mnist_SimpleCNN_adam_7_v2cvx
+2026-07-11 22:13:25 [3/72] done fashion_mnist_SimpleCNN_adam_7_v2cvx acc=0.9148 in 288s
+2026-07-11 22:13:25 [4/72] start fashion_mnist_SimpleCNN_adam_123_v2cvx
+2026-07-11 22:18:13 [4/72] done fashion_mnist_SimpleCNN_adam_123_v2cvx acc=0.9086 in 288s
+2026-07-11 22:18:13 [5/72] start fashion_mnist_SimpleCNN_adamw_7_v2cvx
+2026-07-11 22:23:02 [5/72] done fashion_mnist_SimpleCNN_adamw_7_v2cvx acc=0.9141 in 288s
+2026-07-11 22:23:02 [6/72] start fashion_mnist_SimpleCNN_adamw_123_v2cvx
+2026-07-11 22:27:50 [6/72] done fashion_mnist_SimpleCNN_adamw_123_v2cvx acc=0.9131 in 288s
+2026-07-11 22:27:50 [7/72] start fashion_mnist_SimpleCNN_spsa_7_v2cvx
+2026-07-11 22:29:19 [7/72] done fashion_mnist_SimpleCNN_spsa_7_v2cvx acc=0.1 in 89s
+2026-07-11 22:29:19 [8/72] start fashion_mnist_SimpleCNN_spsa_123_v2cvx
+2026-07-11 22:30:16 [8/72] done fashion_mnist_SimpleCNN_spsa_123_v2cvx acc=0.1 in 57s
+2026-07-11 22:30:16 [9/72] start fashion_mnist_SimpleCNN_ngd_7_v2cvx
+2026-07-11 22:36:43 [9/72] done fashion_mnist_SimpleCNN_ngd_7_v2cvx acc=0.9117 in 387s
+2026-07-11 22:36:43 [10/72] start fashion_mnist_SimpleCNN_ngd_123_v2cvx
+2026-07-11 22:43:10 [10/72] done fashion_mnist_SimpleCNN_ngd_123_v2cvx acc=0.9103 in 387s
+2026-07-11 22:43:10 [11/72] start fashion_mnist_SimpleCNN_ctrl_qng_hp_7_v2cvx
+2026-07-11 22:48:00 [11/72] done fashion_mnist_SimpleCNN_ctrl_qng_hp_7_v2cvx acc=0.9197 in 290s
+2026-07-11 22:48:00 [12/72] start fashion_mnist_SimpleCNN_ctrl_qng_hp_123_v2cvx
+2026-07-11 22:52:50 [12/72] done fashion_mnist_SimpleCNN_ctrl_qng_hp_123_v2cvx acc=0.9153 in 289s
+2026-07-11 22:52:50 [13/72] start cifar10_SimpleCNN_sgd_7_v2cvx
+2026-07-11 22:57:15 [13/72] done cifar10_SimpleCNN_sgd_7_v2cvx acc=0.7722 in 265s
+2026-07-11 22:57:15 [14/72] start cifar10_SimpleCNN_sgd_123_v2cvx
+2026-07-11 23:01:40 [14/72] done cifar10_SimpleCNN_sgd_123_v2cvx acc=0.7688 in 266s
+2026-07-11 23:01:40 [15/72] start cifar10_SimpleCNN_adam_7_v2cvx
+2026-07-11 23:06:07 [15/72] done cifar10_SimpleCNN_adam_7_v2cvx acc=0.7485 in 267s
+2026-07-11 23:06:07 [16/72] start cifar10_SimpleCNN_adam_123_v2cvx
+2026-07-11 23:10:34 [16/72] done cifar10_SimpleCNN_adam_123_v2cvx acc=0.7511 in 267s
+2026-07-11 23:10:34 [17/72] start cifar10_SimpleCNN_adamw_7_v2cvx
+2026-07-11 23:15:01 [17/72] done cifar10_SimpleCNN_adamw_7_v2cvx acc=0.7657 in 267s
+2026-07-11 23:15:01 [18/72] start cifar10_SimpleCNN_adamw_123_v2cvx
+2026-07-11 23:19:28 [18/72] done cifar10_SimpleCNN_adamw_123_v2cvx acc=0.7622 in 267s
+2026-07-11 23:19:28 [19/72] start cifar10_SimpleCNN_spsa_7_v2cvx
+2026-07-11 23:24:04 [19/72] done cifar10_SimpleCNN_spsa_7_v2cvx acc=0.1231 in 276s
+2026-07-11 23:24:04 [20/72] start cifar10_SimpleCNN_spsa_123_v2cvx
+2026-07-11 23:28:40 [20/72] done cifar10_SimpleCNN_spsa_123_v2cvx acc=0.2085 in 276s
+2026-07-11 23:28:40 [21/72] start cifar10_SimpleCNN_ngd_7_v2cvx
+2026-07-11 23:34:37 [21/72] done cifar10_SimpleCNN_ngd_7_v2cvx acc=0.763 in 357s
+2026-07-11 23:34:37 [22/72] start cifar10_SimpleCNN_ngd_123_v2cvx
+2026-07-11 23:40:34 [22/72] done cifar10_SimpleCNN_ngd_123_v2cvx acc=0.7679 in 356s
+2026-07-11 23:40:34 [23/72] start cifar10_SimpleCNN_ctrl_qng_hp_7_v2cvx
+2026-07-11 23:45:01 [23/72] done cifar10_SimpleCNN_ctrl_qng_hp_7_v2cvx acc=0.7693 in 267s
+2026-07-11 23:45:01 [24/72] start cifar10_SimpleCNN_ctrl_qng_hp_123_v2cvx
+2026-07-11 23:49:27 [24/72] done cifar10_SimpleCNN_ctrl_qng_hp_123_v2cvx acc=0.7744 in 267s
+2026-07-11 23:49:27 [25/72] start cifar100_SimpleCNN_sgd_7_v2cvx
+2026-07-11 23:53:54 [25/72] done cifar100_SimpleCNN_sgd_7_v2cvx acc=0.4328 in 266s
+2026-07-11 23:53:54 [26/72] start cifar100_SimpleCNN_sgd_123_v2cvx
+2026-07-11 23:58:20 [26/72] done cifar100_SimpleCNN_sgd_123_v2cvx acc=0.4337 in 266s
+2026-07-11 23:58:20 [27/72] start cifar100_SimpleCNN_adam_7_v2cvx
+2026-07-12 00:02:47 [27/72] done cifar100_SimpleCNN_adam_7_v2cvx acc=0.4106 in 268s
+2026-07-12 00:02:47 [28/72] start cifar100_SimpleCNN_adam_123_v2cvx
+2026-07-12 00:07:15 [28/72] done cifar100_SimpleCNN_adam_123_v2cvx acc=0.4005 in 268s
+2026-07-12 00:07:15 [29/72] start cifar100_SimpleCNN_adamw_7_v2cvx
+2026-07-12 00:11:43 [29/72] done cifar100_SimpleCNN_adamw_7_v2cvx acc=0.4218 in 268s
+2026-07-12 00:11:43 [30/72] start cifar100_SimpleCNN_adamw_123_v2cvx
+2026-07-12 00:16:10 [30/72] done cifar100_SimpleCNN_adamw_123_v2cvx acc=0.4237 in 268s
+2026-07-12 00:16:10 [31/72] start cifar100_SimpleCNN_spsa_7_v2cvx
+2026-07-12 00:20:48 [31/72] done cifar100_SimpleCNN_spsa_7_v2cvx acc=0.0114 in 277s
+2026-07-12 00:20:48 [32/72] start cifar100_SimpleCNN_spsa_123_v2cvx
+2026-07-12 00:25:25 [32/72] done cifar100_SimpleCNN_spsa_123_v2cvx acc=0.015 in 278s
+2026-07-12 00:25:25 [33/72] start cifar100_SimpleCNN_ngd_7_v2cvx
+2026-07-12 00:31:23 [33/72] done cifar100_SimpleCNN_ngd_7_v2cvx acc=0.4561 in 358s
+2026-07-12 00:31:23 [34/72] start cifar100_SimpleCNN_ngd_123_v2cvx
+2026-07-12 00:37:20 [34/72] done cifar100_SimpleCNN_ngd_123_v2cvx acc=0.4516 in 357s
+2026-07-12 00:37:20 [35/72] start cifar100_SimpleCNN_ctrl_qng_hp_7_v2cvx
+2026-07-12 00:41:48 [35/72] done cifar100_SimpleCNN_ctrl_qng_hp_7_v2cvx acc=0.4595 in 268s
+2026-07-12 00:41:48 [36/72] start cifar100_SimpleCNN_ctrl_qng_hp_123_v2cvx
+2026-07-12 00:46:15 [36/72] done cifar100_SimpleCNN_ctrl_qng_hp_123_v2cvx acc=0.4622 in 268s
+2026-07-12 00:46:15 [37/72] start fashion_mnist_ResNet18_sgd_7_v2cvx
+2026-07-12 01:01:22 [37/72] done fashion_mnist_ResNet18_sgd_7_v2cvx acc=0.9034 in 907s
+2026-07-12 01:01:22 [38/72] start fashion_mnist_ResNet18_sgd_123_v2cvx
+2026-07-12 01:16:28 [38/72] done fashion_mnist_ResNet18_sgd_123_v2cvx acc=0.9075 in 906s
+2026-07-12 01:16:28 [39/72] start fashion_mnist_ResNet18_adam_7_v2cvx
+2026-07-12 01:34:00 [39/72] done fashion_mnist_ResNet18_adam_7_v2cvx acc=0.9129 in 1051s
+2026-07-12 01:34:00 [40/72] start fashion_mnist_ResNet18_adam_123_v2cvx
+2026-07-12 01:51:25 [40/72] done fashion_mnist_ResNet18_adam_123_v2cvx acc=0.9134 in 1046s
+2026-07-12 01:51:25 [41/72] start fashion_mnist_ResNet18_adamw_7_v2cvx
+2026-07-12 02:09:26 [41/72] done fashion_mnist_ResNet18_adamw_7_v2cvx acc=0.9105 in 1080s
+2026-07-12 02:09:26 [42/72] start fashion_mnist_ResNet18_adamw_123_v2cvx
+2026-07-12 02:27:24 [42/72] done fashion_mnist_ResNet18_adamw_123_v2cvx acc=0.91 in 1078s
+2026-07-12 02:27:24 [43/72] start fashion_mnist_ResNet18_spsa_7_v2cvx
+2026-07-12 02:51:16 [43/72] done fashion_mnist_ResNet18_spsa_7_v2cvx acc=0.6154 in 1432s
+2026-07-12 02:51:16 [44/72] start fashion_mnist_ResNet18_spsa_123_v2cvx
+2026-07-12 03:15:06 [44/72] done fashion_mnist_ResNet18_spsa_123_v2cvx acc=0.6177 in 1430s
+2026-07-12 03:15:06 [45/72] start fashion_mnist_ResNet18_ngd_7_v2cvx
+2026-07-12 03:43:25 [45/72] done fashion_mnist_ResNet18_ngd_7_v2cvx acc=0.9141 in 1699s
+2026-07-12 03:43:25 [46/72] start fashion_mnist_ResNet18_ngd_123_v2cvx
+2026-07-12 04:11:38 [46/72] done fashion_mnist_ResNet18_ngd_123_v2cvx acc=0.9133 in 1694s
+2026-07-12 04:11:38 [47/72] start fashion_mnist_ResNet18_ctrl_qng_hp_7_v2cvx
+2026-07-12 04:29:37 [47/72] done fashion_mnist_ResNet18_ctrl_qng_hp_7_v2cvx acc=0.9012 in 1079s
+2026-07-12 04:29:37 [48/72] start fashion_mnist_ResNet18_ctrl_qng_hp_123_v2cvx
+2026-07-12 04:47:35 [48/72] done fashion_mnist_ResNet18_ctrl_qng_hp_123_v2cvx acc=0.9053 in 1078s
+2026-07-12 04:47:35 [49/72] start cifar10_ResNet18_sgd_7_v2cvx
+2026-07-12 05:00:27 [49/72] done cifar10_ResNet18_sgd_7_v2cvx acc=0.7078 in 772s
+2026-07-12 05:00:27 [50/72] start cifar10_ResNet18_sgd_123_v2cvx
+2026-07-12 05:13:15 [50/72] done cifar10_ResNet18_sgd_123_v2cvx acc=0.7117 in 768s
+2026-07-12 05:13:15 [51/72] start cifar10_ResNet18_adam_7_v2cvx
+2026-07-12 05:28:10 [51/72] done cifar10_ResNet18_adam_7_v2cvx acc=0.7698 in 895s
+2026-07-12 05:28:10 [52/72] start cifar10_ResNet18_adam_123_v2cvx
+2026-07-12 05:43:12 [52/72] done cifar10_ResNet18_adam_123_v2cvx acc=0.7649 in 902s
+2026-07-12 05:43:12 [53/72] start cifar10_ResNet18_adamw_7_v2cvx
+2026-07-12 05:58:34 [53/72] done cifar10_ResNet18_adamw_7_v2cvx acc=0.7621 in 921s
+2026-07-12 05:58:34 [54/72] start cifar10_ResNet18_adamw_123_v2cvx
+2026-07-12 06:14:11 [54/72] done cifar10_ResNet18_adamw_123_v2cvx acc=0.7614 in 937s
+2026-07-12 06:14:11 [55/72] start cifar10_ResNet18_spsa_7_v2cvx
+2026-07-12 06:34:07 [55/72] done cifar10_ResNet18_spsa_7_v2cvx acc=0.188 in 1196s
+2026-07-12 06:34:07 [56/72] start cifar10_ResNet18_spsa_123_v2cvx
+2026-07-12 06:54:04 [56/72] done cifar10_ResNet18_spsa_123_v2cvx acc=0.1699 in 1197s
+2026-07-12 06:54:04 [57/72] start cifar10_ResNet18_ngd_7_v2cvx
+2026-07-12 07:18:48 [57/72] done cifar10_ResNet18_ngd_7_v2cvx acc=0.7528 in 1484s
+2026-07-12 07:18:48 [58/72] start cifar10_ResNet18_ngd_123_v2cvx
+2026-07-12 07:43:33 [58/72] done cifar10_ResNet18_ngd_123_v2cvx acc=0.757 in 1486s
+2026-07-12 07:43:33 [59/72] start cifar10_ResNet18_ctrl_qng_hp_7_v2cvx
+2026-07-12 07:58:53 [59/72] done cifar10_ResNet18_ctrl_qng_hp_7_v2cvx acc=0.7561 in 920s
+2026-07-12 07:58:53 [60/72] start cifar10_ResNet18_ctrl_qng_hp_123_v2cvx
+2026-07-12 08:03:12 queue=/home/azureuser/qmi-v2/queue/cv_extra_seeds.jsonl items=72
+2026-07-12 08:03:12 [60/72] start cifar10_ResNet18_ctrl_qng_hp_123_v2cvx
+2026-07-12 08:15:27 [60/72] done cifar10_ResNet18_ctrl_qng_hp_123_v2cvx acc=0.7347 in 734s
+2026-07-12 08:15:27 [61/72] start cifar100_ResNet18_sgd_7_v2cvx
+2026-07-12 08:28:15 [61/72] done cifar100_ResNet18_sgd_7_v2cvx acc=0.3862 in 769s
+2026-07-12 08:28:15 [62/72] start cifar100_ResNet18_sgd_123_v2cvx
+2026-07-12 08:41:04 [62/72] done cifar100_ResNet18_sgd_123_v2cvx acc=0.4001 in 768s
+2026-07-12 08:41:04 [63/72] start cifar100_ResNet18_adam_7_v2cvx
+2026-07-12 08:55:59 [63/72] done cifar100_ResNet18_adam_7_v2cvx acc=0.4391 in 895s
+2026-07-12 08:55:59 [64/72] start cifar100_ResNet18_adam_123_v2cvx
+2026-07-12 09:10:59 [64/72] done cifar100_ResNet18_adam_123_v2cvx acc=0.4359 in 900s
+2026-07-12 09:10:59 [65/72] start cifar100_ResNet18_adamw_7_v2cvx
+2026-07-12 09:26:18 [65/72] done cifar100_ResNet18_adamw_7_v2cvx acc=0.4386 in 919s
+2026-07-12 09:26:18 [66/72] start cifar100_ResNet18_adamw_123_v2cvx
+2026-07-12 09:41:41 [66/72] done cifar100_ResNet18_adamw_123_v2cvx acc=0.4469 in 923s
+2026-07-12 09:41:41 [67/72] start cifar100_ResNet18_spsa_7_v2cvx
+2026-07-12 10:01:37 [67/72] done cifar100_ResNet18_spsa_7_v2cvx acc=0.0157 in 1196s
+2026-07-12 10:01:37 [68/72] start cifar100_ResNet18_spsa_123_v2cvx
+2026-07-12 10:21:35 [68/72] done cifar100_ResNet18_spsa_123_v2cvx acc=0.0152 in 1198s
+2026-07-12 10:21:35 [69/72] start cifar100_ResNet18_ngd_7_v2cvx
+2026-07-12 10:46:49 [69/72] done cifar100_ResNet18_ngd_7_v2cvx acc=0.4177 in 1515s
+2026-07-12 10:46:49 [70/72] start cifar100_ResNet18_ngd_123_v2cvx
+2026-07-12 11:12:11 [70/72] done cifar100_ResNet18_ngd_123_v2cvx acc=0.4172 in 1522s
+2026-07-12 11:12:11 [71/72] start cifar100_ResNet18_ctrl_qng_hp_7_v2cvx
+2026-07-12 11:27:25 [71/72] done cifar100_ResNet18_ctrl_qng_hp_7_v2cvx acc=0.4252 in 915s
+2026-07-12 11:27:25 [72/72] start cifar100_ResNet18_ctrl_qng_hp_123_v2cvx
+2026-07-12 11:42:49 [72/72] done cifar100_ResNet18_ctrl_qng_hp_123_v2cvx acc=0.4277 in 923s
+2026-07-12 11:42:49 queue finished: done=13 skipped=59 failed=0
+2026-07-12 11:42:50 queue=/home/azureuser/qmi-v2/queue/nlp_distilbert_baseline.jsonl items=9
+2026-07-12 11:42:50 [1/9] start sst2_distilbert_adamw_42_v2ctl
+2026-07-12 12:47:52 [1/9] done sst2_distilbert_adamw_42_v2ctl acc=0.893348623853211 in 3902s
+2026-07-12 12:47:52 [2/9] start sst2_distilbert_adamw_1337_v2ctl
+2026-07-12 13:52:44 [2/9] done sst2_distilbert_adamw_1337_v2ctl acc=0.9185779816513762 in 3892s
+2026-07-12 13:52:44 [3/9] start sst2_distilbert_adamw_2025_v2ctl
+2026-07-12 14:57:37 [3/9] done sst2_distilbert_adamw_2025_v2ctl acc=0.9059633027522935 in 3893s
+2026-07-12 14:57:37 [4/9] start imdb_distilbert_adamw_42_v2ctl
+2026-07-12 15:33:57 [4/9] done imdb_distilbert_adamw_42_v2ctl acc=0.90756 in 2180s
+2026-07-12 15:33:57 [5/9] start imdb_distilbert_adamw_1337_v2ctl
+2026-07-12 16:10:14 [5/9] done imdb_distilbert_adamw_1337_v2ctl acc=0.90784 in 2177s
+2026-07-12 16:10:14 [6/9] start imdb_distilbert_adamw_2025_v2ctl
+2026-07-12 16:46:32 [6/9] done imdb_distilbert_adamw_2025_v2ctl acc=0.90768 in 2177s
+2026-07-12 16:46:32 [7/9] start ag_news_distilbert_adamw_42_v2ctl
+2026-07-12 18:46:09 [7/9] done ag_news_distilbert_adamw_42_v2ctl acc=0.945921052631579 in 7177s
+2026-07-12 18:46:09 [8/9] start ag_news_distilbert_adamw_1337_v2ctl
+2026-07-12 20:45:43 [8/9] done ag_news_distilbert_adamw_1337_v2ctl acc=0.9418421052631579 in 7174s
+2026-07-12 20:45:43 [9/9] start ag_news_distilbert_adamw_2025_v2ctl
+2026-07-12 22:45:19 [9/9] done ag_news_distilbert_adamw_2025_v2ctl acc=0.9434210526315789 in 7176s
+2026-07-12 22:45:19 queue finished: done=9 skipped=0 failed=0
+2026-07-12 22:45:20 queue=/home/azureuser/qmi-v2/queue/factorial_topup_sst2imdb.jsonl items=8
+2026-07-12 22:45:20 [1/8] start sst2_roberta_adamw_lr1e5_wd001_7_v2ctl
+2026-07-13 00:55:26 [1/8] done sst2_roberta_adamw_lr1e5_wd001_7_v2ctl acc=0.9415137614678899 in 7806s
+2026-07-13 00:55:26 [2/8] start sst2_roberta_adamw_lr1e5_wd001_123_v2ctl
+2026-07-13 03:05:11 [2/8] done sst2_roberta_adamw_lr1e5_wd001_123_v2ctl acc=0.9438073394495413 in 7785s
+2026-07-13 03:05:11 [3/8] start sst2_roberta_adamw_lr2e5_wd005_7_v2ctl
+2026-07-13 05:14:54 [3/8] done sst2_roberta_adamw_lr2e5_wd005_7_v2ctl acc=0.9369266055045872 in 7783s
+2026-07-13 05:14:54 [4/8] start sst2_roberta_adamw_lr2e5_wd005_123_v2ctl
+2026-07-13 07:24:41 [4/8] done sst2_roberta_adamw_lr2e5_wd005_123_v2ctl acc=0.9357798165137615 in 7787s
+2026-07-13 07:24:41 [5/8] start imdb_roberta_adamw_lr1e5_wd001_7_v2ctl
+2026-07-13 08:37:04 [5/8] done imdb_roberta_adamw_lr1e5_wd001_7_v2ctl acc=0.93256 in 4343s
+2026-07-13 08:37:04 [6/8] start imdb_roberta_adamw_lr1e5_wd001_123_v2ctl
+2026-07-13 09:49:26 [6/8] done imdb_roberta_adamw_lr1e5_wd001_123_v2ctl acc=0.94056 in 4342s
+2026-07-13 09:49:26 [7/8] start imdb_roberta_adamw_lr2e5_wd005_7_v2ctl
+2026-07-13 11:01:46 [7/8] done imdb_roberta_adamw_lr2e5_wd005_7_v2ctl acc=0.93088 in 4341s
+2026-07-13 11:01:46 [8/8] start imdb_roberta_adamw_lr2e5_wd005_123_v2ctl
+2026-07-13 12:14:05 [8/8] done imdb_roberta_adamw_lr2e5_wd005_123_v2ctl acc=0.93228 in 4339s
+2026-07-13 12:14:05 queue finished: done=8 skipped=0 failed=0

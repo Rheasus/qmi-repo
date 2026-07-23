@@ -1,0 +1,32 @@
+{
+  "run_id": "cifar100_ResNet18_adamw_7_v2cvx",
+  "domain": "cv",
+  "tag": "v2cvx",
+  "dataset": "cifar100",
+  "model": "ResNet18",
+  "optimizer": "adamw",
+  "seed": 7,
+  "lr": 0.001,
+  "epochs": 50,
+  "batch_size": 32,
+  "opt_kwargs": {
+    "weight_decay": 0.01
+  },
+  "test_accuracy": 0.4386,
+  "test_loss": 3.935582822561264,
+  "macro_f1": 0.43641983359043385,
+  "weighted_f1": 0.43641983359043396,
+  "macro_precision": 0.44706883366489514,
+  "macro_recall": 0.4386,
+  "final_train_loss": 0.11543680100924154,
+  "final_train_acc": 96.36444444444444,
+  "final_val_loss": 4.0511182188987735,
+  "final_val_acc": 42.620000000000005,
+  "best_val_acc": 44.32,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 50,
+  "training_time_seconds": 887.102570772171,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

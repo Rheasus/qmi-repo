@@ -1,0 +1,26 @@
+{
+  "run_id": "adult_MLP_qpso_2025_v2tab",
+  "domain": "tabular",
+  "tag": "v2tab",
+  "dataset": "adult",
+  "model": "MLP",
+  "task": "classification",
+  "optimizer": "qpso",
+  "seed": 2025,
+  "lr": 0.001,
+  "epochs_max": 50,
+  "completed_epochs": 6,
+  "batch_size": 32,
+  "opt_kwargs": {
+    "n_particles": 10
+  },
+  "final_train_loss": 113.48928069756118,
+  "best_val_loss": 0.5984308044115703,
+  "training_time_seconds": 54.99039006233215,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121",
+  "test_loss": 0.6089636603991191,
+  "test_accuracy": 0.7585642145489286,
+  "test_macro_f1": 0.46440299720301986,
+  "test_roc_auc": 0.620281987247859
+}

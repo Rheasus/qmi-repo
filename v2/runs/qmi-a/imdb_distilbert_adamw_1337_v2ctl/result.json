@@ -1,0 +1,31 @@
+{
+  "run_id": "imdb_distilbert_adamw_1337_v2ctl",
+  "domain": "nlp",
+  "tag": "v2ctl",
+  "dataset": "imdb",
+  "model": "distilbert",
+  "optimizer": "adamw",
+  "arm_label": "adamw",
+  "seed": 1337,
+  "lr": 2e-05,
+  "epochs": 3,
+  "batch_size": 16,
+  "opt_kwargs": {
+    "weight_decay": 0.01
+  },
+  "test_accuracy": 0.90784,
+  "test_loss": 0.2854863915216092,
+  "macro_f1": 0.9078016307266432,
+  "weighted_f1": 0.9078016307266432,
+  "macro_precision": 0.9085200387973837,
+  "macro_recall": 0.90784,
+  "final_train_loss": 0.0900008771988615,
+  "final_train_acc": 0.96892,
+  "best_eval_acc": 0.908,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 3,
+  "training_time_seconds": 1991.9251096248627,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

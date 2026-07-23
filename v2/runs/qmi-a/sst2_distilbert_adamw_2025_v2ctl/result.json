@@ -1,0 +1,31 @@
+{
+  "run_id": "sst2_distilbert_adamw_2025_v2ctl",
+  "domain": "nlp",
+  "tag": "v2ctl",
+  "dataset": "sst2",
+  "model": "distilbert",
+  "optimizer": "adamw",
+  "arm_label": "adamw",
+  "seed": 2025,
+  "lr": 2e-05,
+  "epochs": 3,
+  "batch_size": 16,
+  "opt_kwargs": {
+    "weight_decay": 0.01
+  },
+  "test_accuracy": 0.9059633027522935,
+  "test_loss": 0.28113564795681406,
+  "macro_f1": 0.9059316325671466,
+  "weighted_f1": 0.9059633027522935,
+  "macro_precision": 0.9059316325671466,
+  "macro_recall": 0.9059316325671466,
+  "final_train_loss": 0.07481774392927944,
+  "final_train_acc": 0.9731844570817682,
+  "best_eval_acc": 0.9105504587155964,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 3,
+  "training_time_seconds": 3860.7149815559387,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

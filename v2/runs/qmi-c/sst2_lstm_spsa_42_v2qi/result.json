@@ -1,0 +1,31 @@
+{
+  "run_id": "sst2_lstm_spsa_42_v2qi",
+  "domain": "nlp",
+  "tag": "v2qi",
+  "dataset": "sst2",
+  "model": "lstm",
+  "optimizer": "spsa",
+  "arm_label": "spsa",
+  "seed": 42,
+  "lr": 0.001,
+  "epochs": 8,
+  "batch_size": 16,
+  "opt_kwargs": {
+    "c": 0.01
+  },
+  "test_accuracy": 0.5057339449541285,
+  "test_loss": 0.6933154208319527,
+  "macro_f1": 0.34595030132800114,
+  "weighted_f1": 0.35188194471087364,
+  "macro_precision": 0.446091161457867,
+  "macro_recall": 0.4968321124863181,
+  "final_train_loss": 0.6913736112044147,
+  "final_train_acc": 0.5374244606452954,
+  "best_eval_acc": 0.5057339449541285,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 8,
+  "training_time_seconds": 1361.777109861374,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

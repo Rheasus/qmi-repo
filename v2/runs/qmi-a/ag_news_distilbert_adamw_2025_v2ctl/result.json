@@ -1,0 +1,31 @@
+{
+  "run_id": "ag_news_distilbert_adamw_2025_v2ctl",
+  "domain": "nlp",
+  "tag": "v2ctl",
+  "dataset": "ag_news",
+  "model": "distilbert",
+  "optimizer": "adamw",
+  "arm_label": "adamw",
+  "seed": 2025,
+  "lr": 2e-05,
+  "epochs": 3,
+  "batch_size": 16,
+  "opt_kwargs": {
+    "weight_decay": 0.01
+  },
+  "test_accuracy": 0.9434210526315789,
+  "test_loss": 0.179825136531927,
+  "macro_f1": 0.9434514292229766,
+  "weighted_f1": 0.9434514292229766,
+  "macro_precision": 0.9437274501182107,
+  "macro_recall": 0.9434210526315789,
+  "final_train_loss": 0.08916605223920196,
+  "final_train_acc": 0.9691916666666667,
+  "best_eval_acc": 0.9434210526315789,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 3,
+  "training_time_seconds": 7101.224402427673,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}

@@ -1,0 +1,20 @@
+{
+  "top_eigenvalues": [
+    27.140134811401367,
+    23.65410041809082,
+    18.019004821777344,
+    12.182241439819336,
+    11.298900604248047
+  ],
+  "lambda_max": 27.140134811401367,
+  "spectral_ratio_1_to_k": 2.4020155377946675,
+  "trace": 348.8107889811198,
+  "trace_per_param": 0.0005068907529901267,
+  "n_params": 688138,
+  "batch_size": 512,
+  "run_id": "fashion_mnist_SimpleCNN_sgd_1337_v2cv",
+  "arm": "sgd",
+  "dataset": "fashion_mnist",
+  "model": "SimpleCNN",
+  "seed": 1337
+}

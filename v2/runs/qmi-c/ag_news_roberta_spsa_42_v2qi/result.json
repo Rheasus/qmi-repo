@@ -1,0 +1,31 @@
+{
+  "run_id": "ag_news_roberta_spsa_42_v2qi",
+  "domain": "nlp",
+  "tag": "v2qi",
+  "dataset": "ag_news",
+  "model": "roberta",
+  "optimizer": "spsa",
+  "arm_label": "spsa",
+  "seed": 42,
+  "lr": 0.001,
+  "epochs": 3,
+  "batch_size": 16,
+  "opt_kwargs": {
+    "c": 0.01
+  },
+  "test_accuracy": 0.335,
+  "test_loss": 1.381106942641635,
+  "macro_f1": 0.24515427184880173,
+  "weighted_f1": 0.2451542718488017,
+  "macro_precision": 0.4315629787699716,
+  "macro_recall": 0.335,
+  "final_train_loss": 1.3835121599197389,
+  "final_train_acc": 0.28280833333333333,
+  "best_eval_acc": 0.335,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 3,
+  "training_time_seconds": 15689.710101127625,
+  "device": "Tesla T4",
+  "torch_version": "2.5.1+cu121"
+}
