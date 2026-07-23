@@ -131,6 +131,23 @@ def factorial(rows, report, out):
                           f"CI[{lo*100:+.2f},{hi*100:+.2f}] p={p:.3f} (n={len(seeds)})")
         out["factorial"][ds] = res
 
+    # pooled per-seed effects across datasets (family-safe headline test)
+    import numpy as _np
+    all_lr, all_wd = [], []
+    for ds in ["sst2", "imdb", "ag_news"]:
+        c = {(lr, wd): cell(ds, lr, wd) for lr in (2e-5, 1e-5) for wd in (0.01, 0.05)}
+        seeds = sorted(set.intersection(*[set(v) for v in c.values()]))
+        A = {k: _np.array([v[s] for s in seeds]) for k, v in c.items()}
+        all_lr.extend((((A[(1e-5,0.01)]+A[(1e-5,0.05)])-(A[(2e-5,0.01)]+A[(2e-5,0.05)]))/2).tolist())
+        all_wd.extend((((A[(2e-5,0.05)]+A[(1e-5,0.05)])-(A[(2e-5,0.01)]+A[(1e-5,0.01)]))/2).tolist())
+    all_lr, all_wd = _np.array(all_lr), _np.array(all_wd)
+    out["factorial"]["pooled"] = {
+        "lr": {"mean": float(all_lr.mean()), "p_wilcoxon": float(st.wilcoxon(all_lr).pvalue), "n": len(all_lr)},
+        "wd": {"mean": float(all_wd.mean()), "p_wilcoxon": float(st.wilcoxon(all_wd).pvalue), "n": len(all_wd)},
+    }
+    report.append(f"  POOLED   lr {all_lr.mean()*100:+.2f}pt Wilcoxon p={st.wilcoxon(all_lr).pvalue:.5f}; "
+                  f"wd {all_wd.mean()*100:+.2f}pt p={st.wilcoxon(all_wd).pvalue:.3f} (n={len(all_lr)})")
+
 
 # ------------------------------------------------------------------ NGD
 def ngd_comparisons(rows, report, out):
