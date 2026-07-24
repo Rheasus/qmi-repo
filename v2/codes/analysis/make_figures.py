@@ -20,6 +20,7 @@ import numpy as np
 BASE = Path(__file__).resolve().parents[2]
 RUNS = BASE / "runs"
 FIGS = BASE / "paper" / "Quantum_Optimizer_Benchmarking" / "figures"
+FIGS.mkdir(parents=True, exist_ok=True)
 STATS = json.loads((RUNS / "stats_summary.json").read_text())
 
 ARM_COLOR = {"adam": "#0072B2", "adamw": "#56B4E9", "sgd": "#009E73",

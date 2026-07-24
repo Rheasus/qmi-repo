@@ -67,11 +67,28 @@ def paired(a: dict, b: dict):
             np.array([b[s] for s in seeds]), seeds)
 
 
-def boot_ci(diffs, n=10000, seed=0):
-    rng = np.random.default_rng(seed)
-    if len(diffs) == 0:
+def boot_ci(diffs, n=10000, seed=0, small_n=10):
+    """95% CI for the mean of paired differences.
+
+    For small samples (n < small_n, i.e. every per-configuration comparison in
+    this study) the percentile bootstrap is badly anticonservative: at n=5 only
+    C(9,5)=126 distinct resample multisets exist and simulated coverage of the
+    nominal-95% interval is ~83%. We therefore report the Student-t interval
+    there, which is exact under normality and agrees by construction with the
+    paired t-test used for significance. The percentile bootstrap is retained
+    for the pooled comparisons (n>=15), where it is well behaved.
+    """
+    d = np.asarray(diffs, dtype=float)
+    if len(d) == 0:
         return (float("nan"), float("nan"))
-    m = rng.choice(diffs, size=(n, len(diffs)), replace=True).mean(axis=1)
+    if len(d) < small_n:
+        if len(d) < 2 or np.allclose(d, d[0]):
+            return (float(d.mean()), float(d.mean()))
+        se = d.std(ddof=1) / np.sqrt(len(d))
+        h = st.t.ppf(0.975, len(d) - 1) * se
+        return (float(d.mean() - h), float(d.mean() + h))
+    rng = np.random.default_rng(seed)
+    m = rng.choice(d, size=(n, len(d)), replace=True).mean(axis=1)
     return (float(np.percentile(m, 2.5)), float(np.percentile(m, 97.5)))
 
 
@@ -94,6 +111,37 @@ def holm(pvals):
         running = max(running, val)
         adj[idx] = min(1.0, running)
     return adj.tolist()
+
+
+def cluster_summary(per_group):
+    """Dataset-level (cluster-aware) summary of a set of per-seed effect arrays.
+
+    The pooled seed-level tests treat 15 seed-dataset pairs as exchangeable;
+    they are 3 clusters of 5. This reports the DerSimonian-Laird random-effects
+    estimate over the cluster means, Cochran's Q heterogeneity test, and the
+    exact cluster-level sign-flip p-value (whose floor at 3 clusters is 0.25).
+    """
+    means = np.array([g.mean() for g in per_group], dtype=float)
+    ses = np.array([g.std(ddof=1) / np.sqrt(len(g)) for g in per_group], dtype=float)
+    k = len(means)
+    w = 1.0 / ses ** 2
+    mu_fe = float((w * means).sum() / w.sum())
+    Q = float((w * (means - mu_fe) ** 2).sum())
+    C = w.sum() - (w ** 2).sum() / w.sum()
+    tau2 = max(0.0, (Q - (k - 1)) / C)
+    w2 = 1.0 / (ses ** 2 + tau2)
+    mu = float((w2 * means).sum() / w2.sum())
+    se = float(np.sqrt(1.0 / w2.sum()))
+    z = mu / se if se > 0 else float("nan")
+    p_re = float(2 * (1 - st.norm.cdf(abs(z))))
+    import itertools
+    obs = abs(means.mean())
+    flips = list(itertools.product([-1, 1], repeat=k))
+    p_flip = sum(1 for f in flips if abs(np.mean(np.array(f) * means)) >= obs - 1e-12) / len(flips)
+    return {"per_dataset_means": means.tolist(),
+            "re_mean": mu, "re_se": se, "re_p": p_re,
+            "Q": Q, "Q_p": float(1 - st.chi2.cdf(Q, k - 1)),
+            "sign_flip_p": p_flip, "n_clusters": k}
 
 
 # ------------------------------------------------------------------ factorial
@@ -131,19 +179,25 @@ def factorial(rows, report, out):
                           f"CI[{lo*100:+.2f},{hi*100:+.2f}] p={p:.3f} (n={len(seeds)})")
         out["factorial"][ds] = res
 
-    # pooled per-seed effects across datasets (family-safe headline test)
+    # pooled per-seed effects across datasets (descriptive; the cluster-aware
+    # dataset-level summary is the inferential statement)
     import numpy as _np
     all_lr, all_wd = [], []
+    per_ds_lr, per_ds_wd = [], []
     for ds in ["sst2", "imdb", "ag_news"]:
         c = {(lr, wd): cell(ds, lr, wd) for lr in (2e-5, 1e-5) for wd in (0.01, 0.05)}
         seeds = sorted(set.intersection(*[set(v) for v in c.values()]))
         A = {k: _np.array([v[s] for s in seeds]) for k, v in c.items()}
-        all_lr.extend((((A[(1e-5,0.01)]+A[(1e-5,0.05)])-(A[(2e-5,0.01)]+A[(2e-5,0.05)]))/2).tolist())
-        all_wd.extend((((A[(2e-5,0.05)]+A[(1e-5,0.05)])-(A[(2e-5,0.01)]+A[(1e-5,0.01)]))/2).tolist())
+        _lr = ((A[(1e-5,0.01)]+A[(1e-5,0.05)])-(A[(2e-5,0.01)]+A[(2e-5,0.05)]))/2
+        _wd = ((A[(2e-5,0.05)]+A[(1e-5,0.05)])-(A[(2e-5,0.01)]+A[(1e-5,0.01)]))/2
+        all_lr.extend(_lr.tolist()); per_ds_lr.append(_lr)
+        all_wd.extend(_wd.tolist()); per_ds_wd.append(_wd)
     all_lr, all_wd = _np.array(all_lr), _np.array(all_wd)
     out["factorial"]["pooled"] = {
-        "lr": {"mean": float(all_lr.mean()), "p_wilcoxon": float(st.wilcoxon(all_lr).pvalue), "n": len(all_lr)},
-        "wd": {"mean": float(all_wd.mean()), "p_wilcoxon": float(st.wilcoxon(all_wd).pvalue), "n": len(all_wd)},
+        "lr": {"mean": float(all_lr.mean()), "p_wilcoxon": float(st.wilcoxon(all_lr).pvalue),
+               "n": len(all_lr), **cluster_summary(per_ds_lr)},
+        "wd": {"mean": float(all_wd.mean()), "p_wilcoxon": float(st.wilcoxon(all_wd).pvalue),
+               "n": len(all_wd), **cluster_summary(per_ds_wd)},
     }
     report.append(f"  POOLED   lr {all_lr.mean()*100:+.2f}pt Wilcoxon p={st.wilcoxon(all_lr).pvalue:.5f}; "
                   f"wd {all_wd.mean()*100:+.2f}pt p={st.wilcoxon(all_wd).pvalue:.3f} (n={len(all_lr)})")
@@ -154,6 +208,7 @@ def ngd_comparisons(rows, report, out):
     report.append("\n== Genuine NGD vs AdamW cells (RoBERTa) ==")
     out["ngd"] = {}
     pooled = {"vs_v1qng": ([], []), "vs_baseline": ([], [])}
+    per_ds = {"vs_v1qng": [], "vs_baseline": []}
     for ds in ["sst2", "imdb", "ag_news"]:
         ngd = by_seed(rows, "nlp", ds, "roberta", lambda r: r["optimizer"] == "ngd")
         v1qng = by_seed(rows, "nlp", ds, "roberta",
@@ -167,6 +222,7 @@ def ngd_comparisons(rows, report, out):
         for label, ref in [("vs_v1qng", v1qng), ("vs_baseline", base)]:
             a, b, seeds = paired(ngd, ref)
             d = a - b
+            per_ds[label].append(d)
             lo, hi = boot_ci(d)
             res[label] = {"mean_diff": float(d.mean()), "ci": [lo, hi],
                           "p_paired_t": paired_t(a, b), "n": len(seeds)}
@@ -184,7 +240,8 @@ def ngd_comparisons(rows, report, out):
         lo, hi = boot_ci(a - b)
         out["ngd"][f"pooled_{label}"] = {"mean_diff": float((a - b).mean()),
                                          "ci": [lo, hi],
-                                         "p_wilcoxon": p, "n": int(len(a))}
+                                         "p_wilcoxon": p, "n": int(len(a)),
+                                         **cluster_summary(per_ds[label])}
 
 
 # ------------------------------------------------------------------ CV
@@ -283,6 +340,14 @@ def tabular_vs_adam(rows, report, out):
             out["tabular"].append({"dataset": ds, "arm": arm, "metric": metric,
                                    "mean_diff": float(d.mean()), "ci": [lo, hi],
                                    "p": p, "n": len(seeds)})
+    # Within-family Holm over the whole tabular family, reported so that the
+    # unadjusted per-dataset values in the text can be read against it.
+    _ps = [e["p"] for e in out["tabular"]]
+    for e, adj in zip(out["tabular"], holm(_ps)):
+        e["p_holm_family"] = adj
+    report.append(f"  (tabular family: {len(_ps)} tests; "
+                  f"{sum(1 for e in out['tabular'] if e['p'] < 0.05)} raw-significant, "
+                  f"{sum(1 for e in out['tabular'] if e['p_holm_family'] < 0.05)} after within-family Holm)")
 
 
 if __name__ == "__main__":

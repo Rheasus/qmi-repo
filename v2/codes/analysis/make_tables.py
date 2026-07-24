@@ -22,7 +22,7 @@ from statistics import mean, stdev
 BASE = Path(__file__).resolve().parents[2]
 RUNS = BASE / "runs"
 OUT = BASE / "paper" / "Quantum_Optimizer_Benchmarking" / "tables"
-OUT.mkdir(exist_ok=True)
+OUT.mkdir(parents=True, exist_ok=True)
 
 STATS = json.loads((RUNS / "stats_summary.json").read_text())
 
@@ -90,7 +90,8 @@ def cv_main():
         "\\setlength{\\tabcolsep}{4pt}",
         "\\caption{CV benchmark, v2 clean rerun: test accuracy (\\%, mean $\\pm$ std over seeds \\{42,1337,2025,7,123\\}). "
         "NGD = diagonal-Fisher natural gradient (classical QNG analog); HP-QNG = the hyperparameter-control "
-        "configuration from the v1 NLP/tabular ``QNG-inspired'' recipe (Sec.~3.3); SPSA = genuine Spall SPSA. "
+        "configuration from the v1 NLP/tabular ``QNG-inspired'' recipe "
+        "(Section~\\ref{sec:hp_controls}); SPSA = genuine Spall SPSA. "
         "$\\dagger$\\,$k/n$: $k$ of $n$ runs collapsed (NaN loss, aborted after three consecutive non-finite epochs; scored at final state).}",
         "\\label{tab:cv_main}",
         "\\begin{tabular}{l" + "c" * len(arms) + "}",
@@ -140,12 +141,13 @@ def factorial():
         "\\setlength{\\tabcolsep}{5pt}",
         "\\caption{RoBERTa $2\\times2$ factorial decomposition of the original ``QNG-inspired'' configuration. "
         "Upper block: cell means (test accuracy \\%, $\\pm$ std, $n{=}5$ seeds). "
-        "Lower block: seed-paired effect estimates in accuracy points with bootstrap 95\\% CIs; "
-        "* marks unadjusted paired-$t$ $p<0.05$ for the three planned factorial "
-        "contrasts per dataset; the family-safe pooled tests are reported in "
-        "Section~\\ref{sec:res_factorial}. Percentile-bootstrap intervals at $n{=}5$ are "
-        "approximate and can be narrower than $t$-based intervals; significance "
-        "statements follow the paired $t$-test.}",
+        "Lower block: seed-paired effect estimates in accuracy points with $t$-based 95\\% "
+        "CIs (the percentile bootstrap is anticonservative at $n{=}5$ and is reserved for "
+        "the pooled comparisons); * marks unadjusted paired-$t$ $p<0.05$ for the three "
+        "planned factorial contrasts per dataset. None of the starred contrasts survives "
+        "Holm correction within the nine-contrast factorial family; the cluster-aware "
+        "across-dataset analysis of Section~\\ref{sec:res_factorial} is the inferential "
+        "statement.}",
         "\\label{tab:factorial}",
         "\\begin{tabular}{lccc}",
         "\\toprule",
@@ -172,9 +174,13 @@ def ngd_table():
         "\\caption{Diagonal-Fisher NGD on RoBERTa vs the two anchor AdamW cells "
         "(test acc.\\ \\%, $n{=}5$). $\\Delta$: seed-paired mean difference (pt); "
         "* marks unadjusted paired-$t$ $p<0.05$. "
-        "Pooled rows: Wilcoxon signed-rank over all 15 seed-pairs with bootstrap 95\\% CIs; "
-        "the significant pooled comparison survives Holm correction across the two "
-        "pooled tests (adj.\\ $p{=}0.043$).}",
+        "Per-dataset CIs are $t$-based. Pooled rows: Wilcoxon signed-rank over all 15 "
+        "seed-pairs with bootstrap 95\\% CIs; the significant pooled comparison survives "
+        "Holm correction across the two pooled tests (adj.\\ $p{=}0.043$) and is "
+        "corroborated at the dataset level (random-effects $-0.38$\\,pt, $p{=}0.019$, "
+        "homogeneous across datasets). The pooled baseline comparison aggregates "
+        "heterogeneous per-dataset effects ($Q$-test $p{=}0.002$) and is a summary, not a "
+        "common-effect estimate.}",
         "\\label{tab:ngd}",
         "\\begin{tabular}{lccc}",
         "\\toprule",
@@ -224,9 +230,10 @@ def cost_table():
         "SimpleCNN rows are v2 measurements ($n{=}5$); LSTM rows are the v1-campaign "
         "measurements on the same GPU model (the v2 campaign ran no LSTM Adam arm). "
         "The spread between the two measured LSTM ratios reflects those v1 "
-        "reference times; QPSO's own per-step cost is nearly identical on both tasks "
-        "and is dominated by host-side swarm updates rather than forward passes "
-        "(Sec.~3.1). $^{\\ast}$The AG News row projects QPSO's measured per-step "
+        "reference times---which differ mainly through evaluation-set size rather than "
+        "optimizer behaviour---while QPSO's own per-step cost is nearly identical on both "
+        "tasks (1.61 vs 1.62\\,s) and is dominated by host-side swarm updates rather than "
+        "forward passes (Section~\\ref{sec:optimization_methods}). $^{\\ast}$The AG News row projects QPSO's measured per-step "
         "cost onto the AG News step count; the run was not executed and contributes "
         "to no accuracy statistic. This measured infeasibility motivates restricting "
         "genuine population methods to small models.}",
@@ -256,7 +263,10 @@ def tabular_mlp():
         "\\caption{Tabular MLP benchmark (v2): the genuine neural optimizer comparison for the "
         "tabular domain (mean $\\pm$ std, $n{=}5$ seeds). Adult/HIGGS: test accuracy (\\%); "
         "California Housing: test RMSE. `--': all five runs diverged to "
-        "non-finite loss (SPSA on California Housing).}",
+        "non-finite loss (SPSA on California Housing). The 17 arm-vs-Adam tests in this "
+        "family are exploratory and reported unadjusted; seven of the eight nominally "
+        "significant ones survive Holm correction within the family, the exception being "
+        "SGD on HIGGS (adj.\\ $p{=}0.41$).}",
         "\\label{tab:tabular_mlp}",
         "\\begin{tabular}{l" + "c" * len(arms) + "}",
         "\\toprule",
@@ -292,7 +302,7 @@ def hessian_table():
         "Adam-family optimizers reach the flattest ResNet18 minima (cell means), and "
         "there the NGD analog never finds flatter or better-conditioned solutions; on "
         "SimpleCNN, where conservative arms are flatter and more accurate, classical "
-        "SGD/HP-QNG show the pattern equally (Sec.~7.3).}",
+        "SGD/HP-QNG show the pattern equally (Section~\\ref{sec:disc_curvature}).}",
         "\\label{tab:hessian}",
         "\\begin{tabular}{llccccc}",
         "\\toprule",
