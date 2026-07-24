@@ -4,7 +4,7 @@ These are the EXACT configurations that ran in v1 under the labels QNG / QPSO /
 COBYLA (verified against the v1 run logs and result CSVs). In v2 they are kept
 as *controls*: classical optimizers with alternative hyperparameters, used to
 decompose "QI-inspired" performance differences into hyperparameter effects vs
-algorithm effects. They are reported under honest ctrl_* names in the paper.
+algorithm effects. They are reported under honest HP-* names (ctrl_* run-ids) in the paper.
 
 Provenance (v1 nlp/optimizers.py, confirmed by logged learning rates):
     'qng'    -> AdamW(lr*0.5, betas=(0.9,0.999), eps=1e-8, weight_decay=0.05)
