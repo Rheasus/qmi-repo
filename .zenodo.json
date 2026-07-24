@@ -1,0 +1,12 @@
+{
+  "creators": [
+    {
+      "name": "Yilmaz, Gorkem",
+      "affiliation": "University of Sussex"
+    }
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "description": "Code, run specifications, and per-run artifacts for 'A Cross-Domain Empirical Benchmark of Quantum-Inspired and Classical Optimization Algorithms for Machine Learning'. All main-text tables and figures of the paper regenerate programmatically from this tree (v2/codes/analysis/).",
+  "keywords": ["optimization", "quantum-inspired", "benchmark", "deep learning", "SPSA", "QPSO", "natural gradient descent"]
+}
