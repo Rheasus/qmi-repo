@@ -3,3 +3,5 @@ __pycache__/
 .venv/
 v2/runs/datasets/
 v2/runs/smoke/
+
+analysis/_preview/

@@ -2,7 +2,7 @@
 """Generate the revised paper's figures (PDF) from stats/landscape artifacts.
 
   fig_cd_diagram.pdf        Demsar-style critical-difference diagram (CV arms)
-  fig_factorial_effects.pdf factorial effect estimates with bootstrap CIs
+  fig_factorial_effects.pdf factorial effect estimates with t-based 95% CIs
   fig_landscape.pdf         1D minima interpolations + 2D surface (CIFAR-10/ResNet18)
 
 Colorblind-safe palette (validated): color follows the arm identity across
@@ -20,6 +20,8 @@ import numpy as np
 BASE = Path(__file__).resolve().parents[2]
 RUNS = BASE / "runs"
 FIGS = BASE / "paper" / "Quantum_Optimizer_Benchmarking" / "figures"
+PREVIEW = Path(__file__).resolve().parent / "_preview"
+PREVIEW.mkdir(parents=True, exist_ok=True)
 FIGS.mkdir(parents=True, exist_ok=True)
 STATS = json.loads((RUNS / "stats_summary.json").read_text())
 
@@ -82,7 +84,7 @@ def cd_diagram():
             color="0.45", lw=3.5, solid_capstyle="round")
     fig.tight_layout()
     fig.savefig(FIGS / "fig_cd_diagram.pdf", bbox_inches="tight")
-    fig.savefig(FIGS / "preview_cd.png", dpi=150, bbox_inches="tight")
+    fig.savefig(PREVIEW / "preview_cd.png", dpi=150, bbox_inches="tight")
     plt.close(fig)
 
 
@@ -168,7 +170,7 @@ def landscape():
 
     fig.tight_layout()
     fig.savefig(FIGS / "fig_landscape.pdf", bbox_inches="tight")
-    fig.savefig(FIGS / "preview_landscape.png", dpi=150, bbox_inches="tight")
+    fig.savefig(PREVIEW / "preview_landscape.png", dpi=150, bbox_inches="tight")
     plt.close(fig)
 
 
@@ -202,7 +204,7 @@ def cv_curves():
     ax.set_ylabel("validation accuracy (%)")
     fig.tight_layout()
     fig.savefig(FIGS / "fig_cv_curves.pdf", bbox_inches="tight")
-    fig.savefig(FIGS / "preview_curves.png", dpi=150, bbox_inches="tight")
+    fig.savefig(PREVIEW / "preview_curves.png", dpi=150, bbox_inches="tight")
     plt.close(fig)
 
 
