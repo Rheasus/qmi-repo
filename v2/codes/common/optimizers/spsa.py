@@ -11,8 +11,8 @@ Genuine gradient-free SPSA: two loss evaluations per update step, Rademacher
 For Delta_i in {+1,-1}, 1/Delta_i == Delta_i, so the update is a scalar times
 the perturbation vector. No backpropagation is used at any point.
 
-This is a faithful port of the v1 NLP implementation (the only genuine QI-family
-implementation in v1), with two fixes:
+This is a faithful port of the v1 NLP implementation (the only direct
+algorithm implementation in v1), with two fixes:
   * a single global perturbation vector spans ALL parameter groups (the v1
     version perturbed groups sequentially, which is only equivalent when the
     model has exactly one param group);

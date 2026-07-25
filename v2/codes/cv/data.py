@@ -64,7 +64,8 @@ def _load_cifar_hf(dataset_name, split, transform, cache_dir):
 
 
 def load_cv_data(dataset_name: str, data_dir: str, batch_size: int, seed: int,
-                 val_fraction: float = 0.1, num_workers: int = 2):
+                 val_fraction: float = 0.1, num_workers: int = 2,
+                 loader_seed: int | None = None):
     if dataset_name not in DATASETS:
         raise ValueError(f"Unknown CV dataset: {dataset_name}")
     cls, num_classes, channels, (mean, std) = DATASETS[dataset_name]
@@ -91,8 +92,12 @@ def load_cv_data(dataset_name: str, data_dir: str, batch_size: int, seed: int,
         train_full, [n_train, n_val],
         generator=torch.Generator().manual_seed(seed))
 
+    loader_generator = None
+    if loader_seed is not None:
+        loader_generator = torch.Generator().manual_seed(loader_seed)
     train_loader = DataLoader(train_set, batch_size=batch_size, shuffle=True,
-                              num_workers=num_workers, pin_memory=True)
+                              num_workers=num_workers, pin_memory=True,
+                              generator=loader_generator)
     val_loader = DataLoader(val_set, batch_size=256, shuffle=False,
                             num_workers=num_workers, pin_memory=True)
     test_loader = DataLoader(test_set, batch_size=256, shuffle=False,

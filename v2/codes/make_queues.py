@@ -90,11 +90,11 @@ def nlp_controls():
     write("nlp_controls", specs)
 
 
-# ---------------------------------------------------- NLP genuine QI arms
+# ------------------------------------------ NLP direct-algorithm / analog arms
 def nlp_real_qi():
     specs = []
     tag = "v2qi"
-    # real NGD on transformers (the headline claim's genuine counterpart)
+    # Configured NGD-style classical analog on transformers.
     for dataset in ["sst2", "imdb", "ag_news"]:
         for model, epochs in [("roberta", 3), ("distilbert", 3)]:
             for seed in SEEDS:
@@ -231,7 +231,8 @@ def ngd_topup():
         write(name, specs)
 
 
-# Genuine QPSO measured at ~37x the per-run cost of Adam on LSTM (15.1h vs
+# The stochastic-minibatch QPSO adaptation measured at ~37x the per-run cost
+# of Adam on LSTM (15.1h vs
 # 0.4h on SST-2). ag_news QPSO (~38h/run) is dropped and reported as a
 # measured-cost infeasibility; imdb seeds 1337/2025 are offloaded to qmi-d.
 def qpso_offload():
@@ -281,7 +282,7 @@ def nlp_distilbert_baseline():
 
 
 def qpso_simplecnn():
-    # Trimmed after measuring genuine QPSO at ~5.4h/run on SimpleCNN with
+    # Trimmed after measuring the QPSO adaptation at ~5.4h/run on SimpleCNN with
     # chance-level accuracy: fashion keeps n=5, cifar10 n=3, cifar100 dropped
     # (reported as measured-cost infeasibility alongside the LSTM numbers).
     specs = []

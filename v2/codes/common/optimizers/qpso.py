@@ -1,6 +1,6 @@
-"""Canonical Quantum-behaved Particle Swarm Optimization (Sun et al. 2004).
+"""QPSO position update (Sun et al. 2004) adapted to minibatch training.
 
-Genuine population-based QPSO for neural-network training. Each particle is a
+Each particle is a
 full flattened copy of the model parameters. Per optimization step, every
 particle is evaluated (forward pass only) on the SAME minibatch, personal and
 global bests are updated, and positions are resampled around per-particle
@@ -14,13 +14,16 @@ with the contraction-expansion coefficient beta annealed linearly from
 beta_start to beta_end over the training horizon.
 
 Scale limits (documented in the paper): memory is n_particles * n_params and
-compute is n_particles forward passes per step, which is why genuine QPSO is
+compute is n_particles forward passes per step, which is why this adaptation is
 evaluated on the small/medium models (MLP, SimpleCNN, LSTM) and is infeasible
 for 100M+ parameter transformers -- that infeasibility is itself a finding.
 
-Stochastic-objective caveat (documented): personal-best losses are compared
-across minibatches, the standard practical compromise when applying swarm
-methods to stochastic NN objectives.
+Stochastic-objective caveat (documented): historical personal/global-best
+losses are compared with current losses from different minibatches and, where
+present, independent dropout realizations. They are noisy evaluations on
+different samples and are not strictly commensurate. The stored global best is
+therefore the lowest recorded noisy minibatch loss, not a demonstrated
+minimizer of one fixed objective.
 """
 
 import torch
@@ -81,7 +84,8 @@ class QPSO:
             vector_to_parameters(self.X[i].to(self.device), params)
             losses[i] = float(closure())
 
-        # 2) update personal / global bests
+        # 2) Update personal/global bests. These historical losses may come
+        # from different minibatches/dropout draws than the current losses.
         improved = losses < self.pbest_loss
         self.pbest_loss[improved] = losses[improved]
         self.P[improved] = self.X[improved]

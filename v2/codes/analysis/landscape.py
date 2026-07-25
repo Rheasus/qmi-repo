@@ -1,4 +1,4 @@
-"""Loss-landscape probes: 1D minima interpolation and 2D filter-normalized
+"""Loss-landscape probes: 1D checkpoint interpolation and 2D filter-normalized
 surfaces (Li et al. 2018), computed on fixed seeded data subsets.
 
 Outputs JSON (curves/grids); figures are rendered locally for the paper.

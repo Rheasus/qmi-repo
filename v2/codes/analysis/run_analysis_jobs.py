@@ -9,7 +9,7 @@ Usage:
 hessian:   every CV v2cv run of arms {adam, adamw, sgd, ngd, ctrl_qng_hp}
            (seeds 42/1337/2025) -> hessian.json next to result.json.
 landscape: for each CV (dataset, model): 1D interpolation adam<->ngd and
-           adam<->sgd (seed 42) + 2D surface around adam and ngd minima
+           adam<->sgd (seed 42) + 2D surface around adam and ngd checkpoints
            -> landscape_*.json in an analysis/ folder under results.
 Idempotent: existing outputs are skipped.
 """
@@ -39,14 +39,16 @@ SEEDS = [42, 1337, 2025]
 
 def fixed_batch(dataset, data_dir, n=512, seed=1234):
     train_loader, _, _, num_classes, channels = load_cv_data(
-        dataset, data_dir, batch_size=n, seed=seed, num_workers=0)
+        dataset, data_dir, batch_size=n, seed=seed, num_workers=0,
+        loader_seed=seed)
     x, y = next(iter(train_loader))
     return (x, y), num_classes, channels
 
 
 def eval_batches(dataset, data_dir, n_total=2048, seed=1234):
     train_loader, _, _, _, _ = load_cv_data(
-        dataset, data_dir, batch_size=256, seed=seed, num_workers=0)
+        dataset, data_dir, batch_size=256, seed=seed, num_workers=0,
+        loader_seed=seed)
     batches, got = [], 0
     for x, y in train_loader:
         batches.append((x, y))
@@ -88,7 +90,7 @@ def do_hessian(results, data_dir, device):
                                     "dataset": dataset, "model": model_name,
                                     "seed": seed})
                     write_result(run_dir, payload)
-                    print(f"hessian {run_id}: lmax={payload['lambda_max']:.2f} "
+                    print(f"hessian {run_id}: ldom={payload['lambda_max']:.2f} "
                           f"trace/n={payload['trace_per_param']:.3e} "
                           f"({time.time()-t0:.0f}s)", flush=True)
                 except RuntimeError as e:

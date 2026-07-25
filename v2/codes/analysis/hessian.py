@@ -1,11 +1,14 @@
-"""Hessian spectrum analysis at trained minima (reviewer point: substantiate
-curvature claims with measurements).
+"""Approximate Hessian curvature analysis at trained checkpoints.
 
-For a trained checkpoint, computes on a fixed, seeded data subset:
-  * top-k Hessian eigenvalues (power iteration with deflation, HVP via
-    double backprop),
+For a trained checkpoint, computes on one data subset:
+  * dominant-direction Rayleigh estimates (power iteration with deflation,
+    HVP via double backprop),
   * Hessian trace (Hutchinson estimator, Rademacher probes),
-  * spectral concentration ratio lambda_1 / lambda_k.
+  * a first-to-k returned-estimate ratio.
+
+Power iteration targets large-magnitude directions; the returned values are
+not guaranteed to be positive or algebraically ordered. They do not certify
+that the checkpoint is a local minimum or provide a Hessian condition number.
 
 BatchNorm/Dropout are in eval mode, so the loss is deterministic in the
 parameters (standard practice for landscape/curvature analysis).
@@ -49,6 +52,7 @@ def _norm(vecs):
 
 
 def top_eigenvalues(model, loss, k=5, iters=25, seed=0):
+    """Backward-compatible name: return dominant-direction Rayleigh estimates."""
     params = _flat_params(model)
     hvp = _hvp_fn(model, loss, params)
     gen = torch.Generator(device=params[0].device).manual_seed(seed)
@@ -99,6 +103,9 @@ def analyze_checkpoint(model, data_batch, criterion, k=5, probes=30):
     trace = hutchinson_trace(model, loss2, probes=probes)
     n_params = sum(p.numel() for p in _flat_params(model))
     return {
+        "dominant_rayleigh_estimates": eigs,
+        "dominant_rayleigh_first": eigs[0],
+        # Legacy keys retained so existing artifacts/table scripts still load.
         "top_eigenvalues": eigs,
         "lambda_max": eigs[0],
         "spectral_ratio_1_to_k": eigs[0] / eigs[-1] if eigs[-1] != 0 else None,

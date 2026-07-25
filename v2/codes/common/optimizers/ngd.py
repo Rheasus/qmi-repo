@@ -1,25 +1,25 @@
-"""Diagonal empirical-Fisher Natural Gradient Descent (classical QNG analog).
+"""Diagonal second-moment NGD-style optimizer (classical QNG analog).
 
 Quantum Natural Gradient (Stokes et al. 2020) preconditions parameter updates
 with the quantum geometric tensor (Fubini-Study metric). For classical neural
 networks the corresponding object is the Fisher information matrix, and the
 corresponding algorithm is Amari's natural gradient descent (Amari 1998).
-Computing/inverting the full Fisher is infeasible at NN scale, so we implement
-the standard scalable approximation (Martens 2014): a *diagonal empirical
-Fisher* estimated as an EMA of squared minibatch gradients,
+Computing/inverting the full Fisher is infeasible at NN scale, so this
+configured analog uses an EMA of squared minibatch-mean gradients,
 
     F_t   = beta * F_{t-1} + (1 - beta) * g_t^2          (bias-corrected)
     u_t   = g_t / (F_t + damping)                        (preconditioned grad)
     m_t   = mu * m_{t-1} + u_t                           (heavy-ball momentum)
     theta = theta - lr * m_t                             (+ decoupled wd)
 
-An optional per-step update-norm clip guards against the low-curvature blowup
-that raw Fisher preconditioning exhibits early in training.
+This is a diagonal second-moment / empirical-Fisher proxy, not a directly
+computed empirical Fisher: square(mean per-example gradient) is not generally
+equal to mean(square per-example gradient). An optional per-step update-norm
+clip guards against early large preconditioned updates.
 
-Relationship to adaptive methods (stated in the paper): dividing by F ~ E[g^2]
-rather than sqrt(E[g^2]) is precisely what separates NGD from RMSprop/Adam;
-this proximity is itself part of the paper's argument that practical QNG
-analogs collapse toward the Adam family at NN scale.
+The configured arm also has optimizer-specific momentum, damping, clipping,
+weight decay, and denominator scaling. Comparisons with AdamW therefore do
+not isolate the causal contribution of the preconditioner.
 """
 
 import torch
@@ -62,6 +62,7 @@ class DiagNGD(Optimizer):
                 state = self.state[p]
                 if len(state) == 0:
                     state["step"] = 0
+                    # Historical key retained for checkpoint compatibility.
                     state["fisher"] = torch.zeros_like(p)
                     state["momentum_buf"] = torch.zeros_like(p)
 
@@ -69,7 +70,7 @@ class DiagNGD(Optimizer):
                 t = state["step"]
                 F = state["fisher"]
                 F.mul_(beta).addcmul_(g, g, value=1.0 - beta)
-                # bias-corrected Fisher estimate
+                # Bias-corrected squared-minibatch-gradient second moment.
                 F_hat = F / (1.0 - beta ** t)
 
                 u = g / (F_hat + damping)

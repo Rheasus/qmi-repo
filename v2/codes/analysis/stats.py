@@ -3,7 +3,7 @@
 
 Produces, from the synced result.json files:
   1. RoBERTa factorial: lr / wd / interaction effect estimates per dataset,
-     with seed-paired t-tests and bootstrap 95% CIs.
+     with seed-paired t-tests and t-based 95% CIs.
   2. Genuine-NGD comparisons vs the v1-QNG cell and vs baseline AdamW,
      per dataset (paired t) and pooled across datasets (Wilcoxon, n=15 pairs).
   3. CV: every arm vs Adam per configuration (paired by seed), with Holm
@@ -117,9 +117,17 @@ def cluster_summary(per_group):
     """Dataset-level (cluster-aware) summary of a set of per-seed effect arrays.
 
     The pooled seed-level tests treat 15 seed-dataset pairs as exchangeable;
-    they are 3 clusters of 5. This reports the DerSimonian-Laird random-effects
-    estimate over the cluster means, Cochran's Q heterogeneity test, and the
-    exact cluster-level sign-flip p-value (whose floor at 3 clusters is 0.25).
+    they are 3 clusters of 5. This reports a DerSimonian-Laird random-effects
+    point estimate over the cluster means, modified Hartung-Knapp inference
+    (the primary small-k inference), the conventional normal-z result for
+    sensitivity/audit only, Cochran's Q heterogeneity test, and the exact
+    cluster-level sign-flip p-value (whose floor at 3 clusters is 0.25).
+
+    The modified Hartung-Knapp variance multiplier is max(q, 1), avoiding an
+    interval narrower than the conventional random-effects interval when the
+    residual q estimate happens to fall below one. With only three clusters,
+    no asymptotic p-value should be treated as conclusive; the paper reports
+    the interval and exact sign-flip result alongside it.
     """
     means = np.array([g.mean() for g in per_group], dtype=float)
     ses = np.array([g.std(ddof=1) / np.sqrt(len(g)) for g in per_group], dtype=float)
@@ -131,15 +139,39 @@ def cluster_summary(per_group):
     tau2 = max(0.0, (Q - (k - 1)) / C)
     w2 = 1.0 / (ses ** 2 + tau2)
     mu = float((w2 * means).sum() / w2.sum())
-    se = float(np.sqrt(1.0 / w2.sum()))
-    z = mu / se if se > 0 else float("nan")
-    p_re = float(2 * (1 - st.norm.cdf(abs(z))))
+    se_z = float(np.sqrt(1.0 / w2.sum()))
+    z = mu / se_z if se_z > 0 else float("nan")
+    p_re_z = float(2 * st.norm.sf(abs(z)))
+
+    # Hartung-Knapp small-sample inference with k-1 degrees of freedom.
+    q_hk = float((w2 * (means - mu) ** 2).sum() / (k - 1))
+    q_mkh = max(1.0, q_hk)
+    se_hk = float(np.sqrt(q_hk / w2.sum()))
+    se_mkh = float(np.sqrt(q_mkh / w2.sum()))
+    t_hk = mu / se_hk if se_hk > 0 else float("nan")
+    t_mkh = mu / se_mkh if se_mkh > 0 else float("nan")
+    p_hk = float(2 * st.t.sf(abs(t_hk), k - 1))
+    p_mkh = float(2 * st.t.sf(abs(t_mkh), k - 1))
+    tcrit = float(st.t.ppf(0.975, k - 1))
+    ci_hk = [float(mu - tcrit * se_hk), float(mu + tcrit * se_hk)]
+    ci_mkh = [float(mu - tcrit * se_mkh), float(mu + tcrit * se_mkh)]
+
     import itertools
     obs = abs(means.mean())
     flips = list(itertools.product([-1, 1], repeat=k))
     p_flip = sum(1 for f in flips if abs(np.mean(np.array(f) * means)) >= obs - 1e-12) / len(flips)
     return {"per_dataset_means": means.tolist(),
-            "re_mean": mu, "re_se": se, "re_p": p_re,
+            "re_mean": mu,
+            "re_se": se_mkh,
+            "re_ci": ci_mkh,
+            "re_p": p_mkh,
+            "re_inference": "DerSimonian-Laird tau^2; modified Hartung-Knapp t inference",
+            "re_se_hk": se_hk,
+            "re_ci_hk": ci_hk,
+            "re_p_hk": p_hk,
+            "re_q_hk": q_hk,
+            "re_se_dl_z": se_z,
+            "re_p_dl_z": p_re_z,
             "Q": Q, "Q_p": float(1 - st.chi2.cdf(Q, k - 1)),
             "sign_flip_p": p_flip, "n_clusters": k}
 
@@ -201,6 +233,13 @@ def factorial(rows, report, out):
     }
     report.append(f"  POOLED   lr {all_lr.mean()*100:+.2f}pt Wilcoxon p={st.wilcoxon(all_lr).pvalue:.5f}; "
                   f"wd {all_wd.mean()*100:+.2f}pt p={st.wilcoxon(all_wd).pvalue:.3f} (n={len(all_lr)})")
+    for name in ("lr", "wd"):
+        c = out["factorial"]["pooled"][name]
+        report.append(
+            f"    dataset-level {name}: RE={c['re_mean']*100:+.2f}pt "
+            f"mHK 95% CI[{c['re_ci'][0]*100:+.2f},{c['re_ci'][1]*100:+.2f}] "
+            f"p={c['re_p']:.3f}; Q p={c['Q_p']:.3f}; "
+            f"exact sign-flip p={c['sign_flip_p']:.3f} (k={c['n_clusters']})")
 
 
 # ------------------------------------------------------------------ NGD
@@ -242,6 +281,12 @@ def ngd_comparisons(rows, report, out):
                                          "ci": [lo, hi],
                                          "p_wilcoxon": p, "n": int(len(a)),
                                          **cluster_summary(per_ds[label])}
+        c = out["ngd"][f"pooled_{label}"]
+        report.append(
+            f"    dataset-level {label}: RE={c['re_mean']*100:+.2f}pt "
+            f"mHK 95% CI[{c['re_ci'][0]*100:+.2f},{c['re_ci'][1]*100:+.2f}] "
+            f"p={c['re_p']:.3f}; Q p={c['Q_p']:.3f}; "
+            f"exact sign-flip p={c['sign_flip_p']:.3f} (k={c['n_clusters']})")
 
 
 # ------------------------------------------------------------------ CV
@@ -351,11 +396,14 @@ def tabular_vs_adam(rows, report, out):
 
 
 def multiplicity_summary(out, report):
-    """Global multiplicity reference point over every test reported in the main text.
+    """Global multiplicity reference point over every inferential quantity.
 
     The paper corrects within families, not globally. This records what a single
-    global correction over the whole reported set would give, so the claim is
-    reproducible rather than asserted. Membership is explicit below.
+    global correction over the whole generated set would give, so the claim is
+    reproducible rather than asserted. Membership is explicit below. For each
+    pooled effect the ledger includes the descriptive pooled Wilcoxon test plus
+    the primary modified-Hartung-Knapp random-effects test, Cochran's Q, and the
+    exact dataset-level sign-flip test.
     """
     groups = {}
     groups["cv_vs_adam"] = [e["p"] for e in out.get("cv_vs_adam", [])]
@@ -363,11 +411,28 @@ def multiplicity_summary(out, report):
     fac = out.get("factorial", {})
     groups["factorial_contrasts"] = [fac[ds][k]["p"] for ds in ("sst2", "imdb", "ag_news")
                                      for k in ("lr", "wd", "interaction") if ds in fac]
-    groups["factorial_pooled"] = [fac["pooled"][k]["p_wilcoxon"] for k in ("lr", "wd")] if "pooled" in fac else []
+    if "pooled" in fac:
+        groups["factorial_pooled_wilcoxon"] = [
+            fac["pooled"][k]["p_wilcoxon"] for k in ("lr", "wd")]
+        groups["factorial_random_effects_mhk"] = [
+            fac["pooled"][k]["re_p"] for k in ("lr", "wd")]
+        groups["factorial_heterogeneity"] = [
+            fac["pooled"][k]["Q_p"] for k in ("lr", "wd")]
+        groups["factorial_sign_flip"] = [
+            fac["pooled"][k]["sign_flip_p"] for k in ("lr", "wd")]
+    else:
+        groups["factorial_pooled_wilcoxon"] = []
+        groups["factorial_random_effects_mhk"] = []
+        groups["factorial_heterogeneity"] = []
+        groups["factorial_sign_flip"] = []
     ngd = out.get("ngd", {})
     groups["ngd_per_dataset"] = [ngd[ds][k]["p_paired_t"] for ds in ("sst2", "imdb", "ag_news")
                                  for k in ("vs_v1qng", "vs_baseline") if ds in ngd]
-    groups["ngd_pooled"] = [ngd[k]["p_wilcoxon"] for k in ("pooled_vs_v1qng", "pooled_vs_baseline") if k in ngd]
+    pooled_ngd_keys = [k for k in ("pooled_vs_v1qng", "pooled_vs_baseline") if k in ngd]
+    groups["ngd_pooled_wilcoxon"] = [ngd[k]["p_wilcoxon"] for k in pooled_ngd_keys]
+    groups["ngd_random_effects_mhk"] = [ngd[k]["re_p"] for k in pooled_ngd_keys]
+    groups["ngd_heterogeneity"] = [ngd[k]["Q_p"] for k in pooled_ngd_keys]
+    groups["ngd_sign_flip"] = [ngd[k]["sign_flip_p"] for k in pooled_ngd_keys]
     fr = out.get("cv_friedman", {})
     groups["friedman"] = [fr["p"]] if "p" in fr else []
     # Dunn entries store the family-adjusted p; the global reference uses the raw

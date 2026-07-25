@@ -3,7 +3,7 @@
 
   fig_cd_diagram.pdf        Demsar-style critical-difference diagram (CV arms)
   fig_factorial_effects.pdf factorial effect estimates with t-based 95% CIs
-  fig_landscape.pdf         1D minima interpolations + 2D surface (CIFAR-10/ResNet18)
+  fig_landscape.pdf         1D checkpoint interpolations + 2D surface (CIFAR-10/ResNet18)
 
 Colorblind-safe palette (validated): color follows the arm identity across
 all figures; direct labels everywhere (contrast relief).
@@ -129,7 +129,7 @@ def landscape():
         ls = [c["loss"] for c in d["curve"]]
         ax.plot(al, ls, lw=1.6, color=ARM_COLOR[other],
                 label=f"Adam $\\leftrightarrow$ {ARM_LABEL[other]}")
-    # exact-minimum training losses from the run logs (final epoch, seed 42);
+    # checkpoint training losses from the run logs (final epoch, seed 42);
     # the sampled grid comes within 1.25% of the endpoints but not exactly on
     # them, and near-endpoint contamination is informative sharpness signal
     exact = {"adam": 0.029, "ngd": 0.044, "sgd": 0.015, "ctrl_qng_hp": 0.079}
@@ -146,7 +146,7 @@ def landscape():
     ax.legend(frameon=False, fontsize=7.5, loc="upper center")
     ax.set_xlabel(r"interpolation coefficient $\alpha$")
     ax.set_ylabel("training loss (log)")
-    ax.set_title("(a) linear paths between minima", fontsize=9)
+    ax.set_title("(a) linear paths between checkpoints", fontsize=9)
 
     ax = axes[1]
     p = adir / "surface_cifar10_ResNet18_adam.json"
@@ -161,11 +161,11 @@ def landscape():
         cb.set_label("training loss", fontsize=8)
         cb.ax.tick_params(labelsize=7)
         ax.plot(0, 0, "o", color="#D55E00", ms=6, zorder=5)
-        ax.annotate("Adam minimum", (0, 0), textcoords="offset points",
+        ax.annotate("Adam checkpoint", (0, 0), textcoords="offset points",
                     xytext=(8, 8), fontsize=7.5, color="#D55E00")
     ax.set_xlabel("direction 1 (filter-normalized)")
     ax.set_ylabel("direction 2")
-    ax.set_title("(b) loss surface around the Adam minimum", fontsize=9)
+    ax.set_title("(b) loss surface around the Adam checkpoint", fontsize=9)
     ax.grid(False)
 
     fig.tight_layout()

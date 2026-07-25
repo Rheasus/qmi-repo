@@ -11,8 +11,8 @@ against the QI-family under an explicit **implementation taxonomy**:
 
 | Class | Arms | Meaning |
 |---|---|---|
-| Genuine | SPSA (Spall 1992), QPSO (Sun et al. 2004) | full algorithm implemented |
-| Classical analog | NGD (diagonal empirical-Fisher natural gradient) | documented classical counterpart of QNG |
+| Direct algorithm | SPSA (Spall 1992), QPSO position update (Sun et al. 2004) | published update rules; QPSO adapted to stochastic minibatches |
+| Classical analog | NGD-style diagonal squared-minibatch-gradient preconditioner | empirical-Fisher proxy, not a directly computed per-example Fisher |
 | Hyperparameter control | HP-QNG, HP-QPSO, HP-COBYLA | the original "-inspired" configurations, kept as controls |
 
 Domains: CV (CIFAR-10/100, Fashion-MNIST × ResNet18/SimpleCNN), NLP (AG News,
@@ -29,7 +29,8 @@ v2/                      revised campaign (the version under review)
     cv/  nlp/  tabular/  domain trainers (checkpoint/resume, collapse handling)
     runner.py            queue-driven executor
     make_queues.py       generates every run specification
-    analysis/            aggregate.py, stats.py (paired tests, Holm, bootstrap,
+    analysis/            aggregate.py, stats.py (paired tests, Holm,
+                         modified Hartung-Knapp, exact sign-flip,
                          Friedman/Nemenyi + Bonferroni-Dunn), hessian.py,
                          landscape.py, make_tables.py, make_figures.py
   infra/queue/           the exact JSONL run specifications executed
@@ -42,9 +43,13 @@ v1/                      original submission's code and consolidated CSVs
                          (retained for provenance; superseded by v2)
 ```
 
-Model weights are not stored in git (≈54 GB); they are archived offline and
-regenerable from the specifications (`infra/queue/*.jsonl`) with the seeds
-recorded in each `result.json`.
+Model weights are not stored in git (≈54 GB). Training can be rerun from the
+specifications (`infra/queue/*.jsonl`) with the seeds recorded in each
+`result.json`. The archived `hessian.json` files regenerate the reported
+curvature table, but exact checkpoint-level recomputation requires retraining.
+The original curvature analysis used one shuffled training batch shared across
+arms and seeds within each dataset; its exact sample-index realization was not
+stored. Future analysis runs now seed that DataLoader explicitly.
 
 ## Reproducing the paper's numbers
 
@@ -58,6 +63,25 @@ python analysis/stats.py --json ../runs/stats_summary.json
 python analysis/make_tables.py           # LaTeX tables
 python analysis/make_figures.py          # PDF figures
 ```
+
+The global reference ledger in `stats_summary.json` contains all 84 reported
+inferential quantities (45 uncorrected, 39 under global BH, and 18 under global
+Holm). The manuscript's primary multiplicity strategy remains correction
+within predeclared families.
+
+## Implementation boundaries
+
+- QPSO historical personal/global-best losses can come from different
+  minibatches and dropout draws. They are noisy, non-commensurate evaluations;
+  the reported result is scoped to this stochastic-minibatch adaptation.
+- NGD tracks an EMA of squared minibatch-mean gradients. Because
+  `square(mean(per-example gradients))` is not generally
+  `mean(square(per-example gradients))`, it is a second-moment /
+  empirical-Fisher proxy.
+- Hessian power iteration returns dominant-direction Rayleigh estimates. The
+  outputs do not certify positive, algebraically ordered eigenvalues, local
+  minima, or a Hessian condition number. Legacy JSON keys are retained for
+  artifact compatibility.
 
 Re-running the experiments themselves:
 
