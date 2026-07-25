@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Generate the revised paper's LaTeX tables from v2 results.
 
-Every number in the revised manuscript flows through this script (single
+Every main-text result table is written by this script; the labelled
+exceptions (v1 reference times, the AG News projection) are marked in the
+captions (single
 source of truth). Output: v2/paper/Quantum_Optimizer_Benchmarking/tables/*.tex
 
 Tables:
