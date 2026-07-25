@@ -1,6 +1,6 @@
 """CV architectures — byte-identical to v1 (paper_codes/cv/models.py).
 
-SimpleCNN (~0.4M params) and torchvision ResNet18 (~11M params) with the same
+SimpleCNN (~0.69-1.19M params, depending on input channels and class count) and torchvision ResNet18 (~11M params) with the same
 adaptations used in v1: first conv swapped for 1-channel inputs, final fc
 resized to num_classes. No other changes, so v2 reruns remain architecture-
 comparable with the v1 results.

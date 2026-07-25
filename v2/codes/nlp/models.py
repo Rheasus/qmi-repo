@@ -1,6 +1,6 @@
 """NLP architectures — identical to v1 (paper_codes/nlp/models.py).
 
-SimpleLSTM (2-layer bidirectional, ~2M params over the bert-base-uncased
+SimpleLSTM (2-layer bidirectional, ~6.3M params, of which 3.9M are embedding over the bert-base-uncased
 vocabulary) plus HuggingFace DistilBERT / RoBERTa sequence classifiers.
 """
 
