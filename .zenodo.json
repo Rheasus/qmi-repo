@@ -7,6 +7,14 @@
   ],
   "license": "MIT",
   "upload_type": "software",
-  "description": "Code, run specifications, and per-run artifacts for 'A Cross-Domain Empirical Benchmark of Quantum-Inspired and Classical Optimization Algorithms for Machine Learning'. All main-text tables and figures of the paper regenerate programmatically from this tree (v2/codes/analysis/).",
-  "keywords": ["optimization", "quantum-inspired", "benchmark", "deep learning", "SPSA", "QPSO", "natural gradient descent"]
+  "description": "Code, run specifications, and per-run artifacts for 'A Cross-Domain Empirical Benchmark of Quantum-Inspired and Classical Optimization Algorithms for Machine Learning'. The main-text result tables and generated figures of the paper regenerate programmatically from this tree (v2/codes/analysis/), with the labelled exceptions stated in the manuscript: the appendix tables retain v1 values verbatim, and in the QPSO cost table the LSTM Adam reference times are v1 measurements while the AG News row is a projection.",
+  "keywords": [
+    "optimization",
+    "quantum-inspired",
+    "benchmark",
+    "deep learning",
+    "SPSA",
+    "QPSO",
+    "natural gradient descent"
+  ]
 }
