@@ -43,13 +43,18 @@ v1/                      original submission's code and consolidated CSVs
                          (retained for provenance; superseded by v2)
 ```
 
-Model weights are not stored in git (≈54 GB). Training can be rerun from the
-specifications (`infra/queue/*.jsonl`) with the seeds recorded in each
-`result.json`. The archived `hessian.json` files regenerate the reported
-curvature table, but exact checkpoint-level recomputation requires retraining.
-The original curvature analysis used one shuffled training batch shared across
-arms and seeds within each dataset; its exact sample-index realization was not
-stored. Future analysis runs now seed that DataLoader explicitly.
+Model weights are not stored in git because the trained checkpoints total
+approximately 54 GB. The author has retained those checkpoints offline and can
+make them available upon reasonable request, subject to practical transfer
+arrangements. Training can also be rerun from the specifications
+(`infra/queue/*.jsonl`) with the seeds recorded in each `result.json`. The
+archived `hessian.json` files regenerate the reported curvature table, and new
+Hessian-vector-product calculations can be performed from the retained
+checkpoints without retraining. The original curvature analysis used one
+shuffled training batch shared across arms and seeds within each dataset; its
+exact sample-index realization was not stored, so bit-for-bit reproduction of
+every archived curvature estimate is not guaranteed even with the checkpoints.
+Future analysis runs now seed that DataLoader explicitly.
 
 ## Reproducing the paper's numbers
 
