@@ -1,0 +1,32 @@
+{
+  "run_id": "smoke_spsa_a0.001",
+  "domain": "cv",
+  "tag": "smoke",
+  "dataset": "fashion_mnist",
+  "model": "SimpleCNN",
+  "optimizer": "spsa",
+  "seed": 42,
+  "lr": 0.001,
+  "epochs": 1,
+  "batch_size": 256,
+  "opt_kwargs": {
+    "c": 0.01
+  },
+  "test_accuracy": 0.1,
+  "test_loss": 2.302454435825348,
+  "macro_f1": 0.01818181818181818,
+  "weighted_f1": 0.01818181818181818,
+  "macro_precision": 0.01,
+  "macro_recall": 0.1,
+  "final_train_loss": 2.303857818034023,
+  "final_train_acc": 9.648148148148149,
+  "final_val_loss": 2.3029824793338776,
+  "final_val_acc": 10.033333333333333,
+  "best_val_acc": 10.033333333333333,
+  "collapsed": false,
+  "collapsed_epoch": null,
+  "completed_epochs": 1,
+  "training_time_seconds": 28.755969047546387,
+  "device": "cpu",
+  "torch_version": "2.12.1"
+}

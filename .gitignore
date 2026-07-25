@@ -2,6 +2,10 @@ __pycache__/
 *.pt
 .venv/
 v2/runs/datasets/
-v2/runs/smoke/
+v2/runs/smoke/*
+!v2/runs/smoke/smoke_spsa_a*/
+v2/runs/smoke/smoke_spsa_a*/*
+!v2/runs/smoke/smoke_spsa_a*/result.json
+!v2/runs/smoke/smoke_spsa_a*/history.json
 
 analysis/_preview/
