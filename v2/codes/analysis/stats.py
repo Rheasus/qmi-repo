@@ -350,6 +350,50 @@ def tabular_vs_adam(rows, report, out):
                   f"{sum(1 for e in out['tabular'] if e['p_holm_family'] < 0.05)} after within-family Holm)")
 
 
+def multiplicity_summary(out, report):
+    """Global multiplicity reference point over every test reported in the main text.
+
+    The paper corrects within families, not globally. This records what a single
+    global correction over the whole reported set would give, so the claim is
+    reproducible rather than asserted. Membership is explicit below.
+    """
+    groups = {}
+    groups["cv_vs_adam"] = [e["p"] for e in out.get("cv_vs_adam", [])]
+    groups["tabular_vs_adam"] = [e["p"] for e in out.get("tabular", [])]
+    fac = out.get("factorial", {})
+    groups["factorial_contrasts"] = [fac[ds][k]["p"] for ds in ("sst2", "imdb", "ag_news")
+                                     for k in ("lr", "wd", "interaction") if ds in fac]
+    groups["factorial_pooled"] = [fac["pooled"][k]["p_wilcoxon"] for k in ("lr", "wd")] if "pooled" in fac else []
+    ngd = out.get("ngd", {})
+    groups["ngd_per_dataset"] = [ngd[ds][k]["p_paired_t"] for ds in ("sst2", "imdb", "ag_news")
+                                 for k in ("vs_v1qng", "vs_baseline") if ds in ngd]
+    groups["ngd_pooled"] = [ngd[k]["p_wilcoxon"] for k in ("pooled_vs_v1qng", "pooled_vs_baseline") if k in ngd]
+    fr = out.get("cv_friedman", {})
+    groups["friedman"] = [fr["p"]] if "p" in fr else []
+    # Dunn entries store the family-adjusted p; the global reference uses the raw
+    # two-sided normal p implied by z.
+    groups["bonferroni_dunn"] = [float(2 * (1 - st.norm.cdf(abs(d["z"]))))
+                                 for d in (fr.get("bonferroni_dunn_vs_adam") or {}).values()]
+
+    allp = [p for g in groups.values() for p in g]
+    m = len(allp)
+    raw = sum(1 for p in allp if p < 0.05)
+    holm_sig = sum(1 for p in holm(allp) if p < 0.05)
+    order = np.argsort(allp)
+    bh_sig, thresh = 0, 0
+    for rank, idx in enumerate(order, start=1):
+        if allp[idx] <= 0.05 * rank / m:
+            thresh = rank
+    bh_sig = thresh
+    out["multiplicity"] = {"per_group": {k: len(v) for k, v in groups.items()},
+                           "n_tests": m, "raw_significant": raw,
+                           "bh_significant": bh_sig, "global_holm_significant": holm_sig}
+    report.append(f"\n== Global multiplicity reference ==\n  {m} reported tests "
+                  f"({', '.join(f'{k}:{len(v)}' for k, v in groups.items())}); "
+                  f"{raw} significant uncorrected, {bh_sig} under global BH(0.05), "
+                  f"{holm_sig} under global Holm")
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--json", default=None)
@@ -362,6 +406,7 @@ if __name__ == "__main__":
     cv_vs_adam(rows, report, out)
     cv_friedman(rows, report, out)
     tabular_vs_adam(rows, report, out)
+    multiplicity_summary(out, report)
     print("\n".join(report))
     if args.json:
         Path(args.json).write_text(json.dumps(out, indent=2))

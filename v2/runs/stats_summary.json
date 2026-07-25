@@ -876,5 +876,21 @@
       "n": 5,
       "p_holm_family": 0.0005445904072286187
     }
-  ]
+  ],
+  "multiplicity": {
+    "per_group": {
+      "cv_vs_adam": 30,
+      "tabular_vs_adam": 17,
+      "factorial_contrasts": 9,
+      "factorial_pooled": 2,
+      "ngd_per_dataset": 6,
+      "ngd_pooled": 2,
+      "friedman": 1,
+      "bonferroni_dunn": 5
+    },
+    "n_tests": 72,
+    "raw_significant": 42,
+    "bh_significant": 39,
+    "global_holm_significant": 19
+  }
 }
