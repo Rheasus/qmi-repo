@@ -48,7 +48,7 @@ recorded in each `result.json`.
 
 ## Reproducing the paper's numbers
 
-Every table and figure in the manuscript is generated from `v2/runs/`:
+The main-text result tables and the four generated figures are produced from `v2/runs/` by the scripts below, with the exceptions the manuscript states: the appendix tables retain v1 values verbatim, and in the QPSO cost table the LSTM Adam reference times are v1 measurements while the AG News row is a projection. The two architecture diagrams are legacy v1 assets and are not generated here:
 
 ```bash
 cd v2/codes
